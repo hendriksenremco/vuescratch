@@ -35,6 +35,11 @@ export default {
           'Developing Vue applications from scratch with Vue.js, NuxtJS and SCSS.',
       },
       {
+        hid: 'fb:app_id',
+        property: 'fb:app_id',
+        content: '754951361756185',
+      },
+      {
         hid: 'og:locale',
         property: 'og:locale',
         content: 'en_US',

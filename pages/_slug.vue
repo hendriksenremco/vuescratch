@@ -54,7 +54,7 @@ export default {
         {
           hid: 'og:description',
           property: 'og:description',
-          content: this.page.body.image,
+          content: this.page.body.children[0].children[0].value,
         },
         {
           hid: 'og:image',
