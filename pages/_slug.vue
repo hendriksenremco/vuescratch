@@ -54,7 +54,12 @@ export default {
         {
           hid: 'og:description',
           property: 'og:description',
-          content: this.page.body.children[0].children[0].value,
+          content: this.page.body.image,
+        },
+        {
+          hid: 'og:image',
+          property: 'og:image',
+          content: require(`~/assets/articles/${this.page.image}`),
         },
         {
           hid: 'og:url',
