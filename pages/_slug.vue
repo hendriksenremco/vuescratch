@@ -8,14 +8,7 @@
     </header>
     <article-content>
       <nuxt-content :document="page" />
-      <script
-        src="https://utteranc.es/client.js"
-        repo="hendriksenremco/vuescratch-comments"
-        issue-term="pathname"
-        theme="github-light"
-        crossorigin="anonymous"
-        async
-      ></script>
+      <div ref="comments"></div>
     </article-content>
   </div>
 </template>
@@ -27,6 +20,17 @@ export default {
     return {
       page,
     }
+  },
+  mounted() {
+    const script = document.createElement('script')
+    script.src = 'https://utteranc.es/client.js'
+    script.setAttribute('repo', 'hendriksenremco/vuescratch-comments')
+    script.setAttribute('issue-term', 'pathname')
+    script.setAttribute('theme', 'github-light')
+    script.setAttribute('crossorigin', 'anonymous')
+    script.setAttribute('async', true)
+
+    this.$refs.comments.appendChild(script)
   },
   head() {
     return {
