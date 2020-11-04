@@ -212,7 +212,7 @@ $breakpoint-mobile: 520px;
 $spacing: 8px;
 ```
 
-Make sure that these variables are include globally so that you can use them everywhere.
+Make sure that these variables are included globally so that you can use them everywhere in your project.
 If you are using [Nuxt.js](https://nuxtjs.org/), you can use [@nuxtjs/style-resources](https://www.npmjs.com/package/@nuxtjs/style-resources) for this.
 In a Vue application you can include it in your main component to make it globally available.
 

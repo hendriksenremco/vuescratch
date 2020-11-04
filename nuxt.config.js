@@ -62,7 +62,6 @@ export default {
       },
     ],
     link: [
-      { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' },
       {
         rel: 'stylesheet',
         href:
@@ -95,6 +94,7 @@ export default {
     '@nuxt/content',
     '@nuxtjs/style-resources',
     '@nuxtjs/sitemap',
+    'nuxt-rfg-icon',
     '@nuxtjs/google-gtag',
   ],
 
