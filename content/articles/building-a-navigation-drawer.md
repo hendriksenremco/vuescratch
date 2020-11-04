@@ -1,5 +1,5 @@
 ---
-title: Building mobile navigation drawer with Vue.js
+title: Building a mobile navigation drawer with Vue.js
 author: remcohendriksen
 image: kitchen-drawer.jpg
 ---
