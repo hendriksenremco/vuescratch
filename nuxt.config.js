@@ -24,6 +24,32 @@ export default {
         content:
           'Developing Vue applications from scratch with Vue.js, NuxtJS and SCSS.',
       },
+      {
+        hid: 'og:locale',
+        property: 'og:locale',
+        content: 'en_US',
+      },
+      {
+        hid: 'og:type',
+        property: 'og:type',
+        content: 'website',
+      },
+      {
+        hid: 'og:title',
+        property: 'og:title',
+        content: 'VueScratch',
+      },
+      {
+        hid: 'og:description',
+        property: 'og:title',
+        content:
+          'Developing Vue applications from scratch with Vue.js, NuxtJS and SCSS.',
+      },
+      {
+        hid: 'og:site_name',
+        property: 'og:site_name',
+        content: 'VueScratch',
+      },
     ],
     link: [
       { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' },

@@ -28,6 +28,44 @@ export default {
       page,
     }
   },
+  head() {
+    return {
+      title: this.page.title,
+      meta: [
+        {
+          hid: 'description',
+          name: 'description',
+          content: this.page.body.children[0].children[0].value,
+        },
+        {
+          hid: 'og:type',
+          property: 'og:type',
+          content: 'article',
+        },
+        {
+          hid: 'og:title',
+          property: 'og:title',
+          content: this.page.title,
+        },
+        {
+          hid: 'og:description',
+          property: 'og:description',
+          content: this.page.body.children[0].children[0].value,
+        },
+        {
+          hid: 'og:url',
+          property: 'og:url',
+          content: `https://vuescratch.com/${this.page.slug}`,
+        },
+      ],
+      link: [
+        {
+          rel: 'canonical',
+          href: `https://vuescratch.com/${this.page.slug}`,
+        },
+      ],
+    }
+  },
 }
 </script>
 <style lang="scss">
