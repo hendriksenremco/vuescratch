@@ -1,7 +1,7 @@
 ---
 title: Building mobile navigation drawer with Vue.js
 author: remcohendriksen
-image: pen-and-paper.jpg
+image: kitchen-drawer.jpg
 ---
 
 A navigation drawer is the most common way to navigate through site on mobile devices. In this post i will show you how to do it.

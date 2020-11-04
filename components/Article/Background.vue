@@ -14,7 +14,7 @@ export default {
   },
   computed: {
     authorImageUrl() {
-      return require(`~/assets/${this.image}`)
+      return require(`~/assets/articles/${this.image}`)
     },
   },
 }

@@ -1,7 +1,7 @@
 # About VueScratch
 
 VueScratch is a site all about building awesome Vue applications.
-My goal is to encourage developers to build more functionality from scratch, without the need of an external framework.
+Encouraging developers to build more functionality from scratch, without the need of an external framework.
 
 It is extremely fun to get things done yourself, and it gives you the most control over the code.
 
