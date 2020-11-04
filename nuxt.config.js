@@ -29,6 +29,11 @@ export default {
       { charset: 'utf-8' },
       { name: 'viewport', content: 'width=device-width, initial-scale=1' },
       {
+        name: 'robots',
+        content:
+          'index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1',
+      },
+      {
         hid: 'description',
         name: 'description',
         content:
