@@ -95,10 +95,15 @@ export default {
     '@nuxt/content',
     '@nuxtjs/style-resources',
     '@nuxtjs/sitemap',
+    '@nuxtjs/google-gtag',
   ],
 
   // Content module configuration (https://go.nuxtjs.dev/config-content)
   content: {},
+
+  'google-gtag': {
+    id: 'G-5XGBF923P4',
+  },
 
   sitemap: {
     hostname: 'https://vuescratch.com',
