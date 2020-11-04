@@ -45,3 +45,5 @@ $grey: lighten($black, 50%);
 $grey-lighter: lighten($black, 70%);
 $grey-lightest: lighten($black, 90%);
 ```
+
+Leave a comment below if you have got any questions about this article.
