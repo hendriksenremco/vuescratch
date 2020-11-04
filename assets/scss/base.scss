@@ -1,0 +1,45 @@
+html {
+  background-color: $black;
+  color: $white;
+  box-sizing: border-box;
+}
+
+body {
+  overflow-x: hidden;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+}
+
+:focus {
+  box-shadow: 0 0 0 1px rgba($grey, 0.5);
+  outline: rgba(0, 0, 0, 0);
+  text-decoration-color: $accent;
+}
+
+main {
+  padding-top: $spacing * 12;
+
+  @media (max-width: #{$breakpoint-mobile}) {
+    padding-top: $spacing * 8;
+  }
+}
+
+.container {
+  max-width: $breakpoint-tablet;
+  margin: 0 auto;
+  min-height: 100vh;
+  padding-top: $spacing * 4;
+
+  @media (max-width: #{$breakpoint-tablet}) {
+    padding: $spacing * 4;
+  }
+
+  @media (max-width: #{$breakpoint-mobile}) {
+    padding: $spacing * 4 $spacing * 2;
+  }
+}
