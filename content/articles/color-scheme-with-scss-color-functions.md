@@ -31,7 +31,7 @@ This will generate the following color scheme:
 
 Use `saturate()` on the light colors, because colors can become quite dull when you lighten them. When you saturate them a bit, you bring some life back in the color.
 
-When you darken colors, the colors can become to vibrant to be in balance with the base color. Therefore you can tame them with `desaturate()`.
+When you darken colors, the colors can become to vibrant to be in balance with the base color. That's why you tame them with `desaturate()`.
 
 ## Grayscales
 
