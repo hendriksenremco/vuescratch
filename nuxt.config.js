@@ -84,13 +84,19 @@ export default {
     // https://go.nuxtjs.dev/content
     '@nuxt/content',
     '@nuxtjs/style-resources',
+    '@nuxtjs/sitemap',
   ],
 
   // Content module configuration (https://go.nuxtjs.dev/config-content)
   content: {},
 
+  sitemap: {
+    hostname: 'https://vuescratch.com',
+  },
   // Build Configuration (https://go.nuxtjs.dev/config-build)
-  build: {},
+  build: {
+    publicPath: 'assets/',
+  },
 
   styleResources: {
     scss: ['~/assets/scss/variables.scss'],
