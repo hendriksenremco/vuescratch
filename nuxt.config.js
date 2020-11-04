@@ -1,3 +1,13 @@
+const createSitemapRoutes = async () => {
+  const routes = []
+  const { $content } = require('@nuxt/content')
+  const articles = await $content('articles').fetch()
+  for (const article of articles) {
+    routes.push(`/${article.slug}`)
+  }
+  return routes
+}
+
 export default {
   // Target (https://go.nuxtjs.dev/config-target)
   target: 'static',
@@ -92,6 +102,9 @@ export default {
 
   sitemap: {
     hostname: 'https://vuescratch.com',
+    gzip: true,
+    exclude: ['/articles'],
+    routes: createSitemapRoutes,
   },
   // Build Configuration (https://go.nuxtjs.dev/config-build)
   build: {
