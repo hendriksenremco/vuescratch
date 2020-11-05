@@ -24,6 +24,7 @@ export default {
   background-size: cover;
   background-position: 50% 50%;
   background-repeat: no-repeat;
+  filter: grayscale(1);
   border-radius: 9999px;
   width: 100%;
   height: 100%;
@@ -38,7 +39,7 @@ export default {
     content: '';
     background: radial-gradient(
       ellipse closest-side,
-      rgba($black, 0.8),
+      rgba($black, 0.75),
       rgba($black, 1)
     );
     border-radius: 9999px;

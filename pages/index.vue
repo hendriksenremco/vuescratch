@@ -19,6 +19,7 @@
 export default {
   async asyncData({ $content, error }) {
     const articles = await $content('articles')
+      .sortBy('createdAt', 'desc')
       .limit(5)
       .fetch()
       .catch((err) => {
