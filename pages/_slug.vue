@@ -63,7 +63,9 @@ export default {
         {
           hid: 'og:image',
           property: 'og:image',
-          content: `https://vuescratch.com/${this.page.image}`,
+          content:
+            'https://vuescratch.com' +
+            require(`~/assets/articles/${this.page.image}`),
         },
         {
           hid: 'og:url',
