@@ -90,6 +90,8 @@ export default {
   components: [
     '~/components',
     { path: '~/components/Article/', prefix: 'article' },
+    { path: '~/components/Comments/', prefix: 'comments' },
+    { path: '~/components/Form/', prefix: 'form' },
   ],
   // Modules for dev and build (recommended) (https://go.nuxtjs.dev/config-modules)
   buildModules: [

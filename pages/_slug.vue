@@ -7,6 +7,7 @@
       <author :author="authors[0]" :date="page.createdAt" />
     </header>
     <article-content>
+      <comments-form />
       <nuxt-content :document="page" />
       <div ref="comments"></div>
     </article-content>
