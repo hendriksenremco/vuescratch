@@ -4,7 +4,7 @@ author: remcohendriksen
 image: vue-structure-code.jpg
 ---
 
-Structuring a Vue application can big challenge. Especially when your application grows bigger. To keep your project understandable in the long run, you need to force yourself to work a certain way.
+Structuring a Vue application can be a big challenge. Especially when your application grows bigger. To keep your project understandable in the long run, you need to force yourself to work a certain way.
 
 That's were standards and good conventions become really handy.
 Never worry about how you should name things and where to place them.
