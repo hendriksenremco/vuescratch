@@ -29,9 +29,9 @@
       margin-left: 0;
     }
 
-    &:hover {
-      color: $accent;
-    }
+    // &:hover {
+    //   color: $accent;
+    // }
   }
 }
 </style>
