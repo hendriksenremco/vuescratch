@@ -129,4 +129,8 @@ export default {
   styleResources: {
     scss: ['~/assets/scss/variables.scss'],
   },
+
+  router: {
+    trailingSlash: true,
+  },
 }

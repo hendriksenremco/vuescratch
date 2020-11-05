@@ -1,14 +1,16 @@
 <template>
   <article class="article-summary">
     <h1>
-      <nuxt-link :to="{ path: slug }">{{ title }}</nuxt-link>
+      <nuxt-link :to="{ name: 'slug', params: { slug } }">{{
+        title
+      }}</nuxt-link>
     </h1>
     <article-background :image="image" />
     <author :author="author" :date="date" />
     <p class="article-summary__text">
       <slot />
     </p>
-    <nuxt-link :to="{ path: slug }">Read article</nuxt-link>
+    <nuxt-link :to="{ name: 'slug', params: { slug } }">Read article</nuxt-link>
   </article>
 </template>
 <script>
