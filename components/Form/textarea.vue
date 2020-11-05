@@ -1,21 +1,17 @@
 <template>
-  <label class="form-input">
-    <div class="form-input__label">{{ label }}</div>
-    <input
-      class="form-input__input"
+  <label class="form-textarea">
+    <div class="form-textarea__label">{{ label }}</div>
+    <textarea
+      class="form-textarea__input"
+      rows="5"
       :value="value"
-      :type="type"
       @change="$emit('input', $event.target.value)"
-    />
+    ></textarea>
   </label>
 </template>
 <script>
 export default {
   props: {
-    type: {
-      type: String,
-      default: '',
-    },
     label: {
       type: String,
       default: '',
@@ -28,7 +24,7 @@ export default {
 }
 </script>
 <style lang="scss">
-.form-input {
+.form-textarea {
   display: flex;
   flex-direction: column;
 

@@ -4,10 +4,11 @@ button,
   justify-content: center;
   border: 1px solid $grey-darker;
   background-color: $black;
+  border-radius: $spacing;
   color: $white;
   cursor: pointer;
   display: flex;
-  font-size: 1.5rem;
+  font-size: 1.25rem;
   font-family: $font-heading;
   padding: $spacing * 1 $spacing * 3;
   appearance: none;
