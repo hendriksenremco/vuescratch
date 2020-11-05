@@ -4,7 +4,7 @@
       <nuxt-link :to="{ path: slug }">{{ title }}</nuxt-link>
     </h1>
     <article-background :image="image" />
-    <author :slug="author" :date="date" />
+    <author :author="author" :date="date" />
     <p class="article-summary__text">
       <slot />
     </p>
@@ -20,13 +20,9 @@ export default {
     ArticleBackground,
   },
   props: {
-    authorImage: {
-      type: String,
-      default: '',
-    },
     author: {
-      type: String,
-      default: '',
+      type: Object,
+      default: null,
     },
     date: {
       type: String,

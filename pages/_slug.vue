@@ -4,7 +4,7 @@
       <article-breadcrumbs />
       <h1>{{ page.title }}</h1>
       <article-background :image="page.image" />
-      <author :slug="page.author" :date="page.createdAt" />
+      <author :author="authors[0]" :date="page.createdAt" />
     </header>
     <article-content>
       <nuxt-content :document="page" />
@@ -16,9 +16,13 @@
 export default {
   async asyncData({ $content, params }) {
     const page = await $content('articles', params.slug).fetch()
+    const authors = await $content('authors')
+      .where({ slug: page.author })
+      .fetch()
 
     return {
       page,
+      authors,
     }
   },
   mounted() {

@@ -4,7 +4,7 @@
       v-for="article in articles"
       :key="article.slug"
       :date="article.createdAt"
-      :author="article.author"
+      :author="author('remcohendriksen')"
       :image="article.image"
       :author-image="article.authorImage"
       :slug="article.slug"
@@ -25,9 +25,20 @@ export default {
         error({ statusCode: 404, message: err.message })
       })
 
+    const authors = await $content('authors').fetch()
+
     return {
       articles,
+      authors,
     }
+  },
+
+  methods: {
+    author(authorSlug) {
+      return this.authors.find((author) => {
+        return author.slug === authorSlug
+      })
+    },
   },
 }
 </script>

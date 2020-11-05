@@ -21,15 +21,10 @@ export default {
       type: String,
       default: '',
     },
-    slug: {
-      type: String,
-      default: '',
+    author: {
+      type: Object,
+      default: null,
     },
-  },
-  data() {
-    return {
-      author: null,
-    }
   },
   computed: {
     authorImageUrl() {
@@ -45,14 +40,6 @@ export default {
 
       return dtFormat.format(new Date(this.date))
     },
-  },
-  mounted() {
-    this.$content('authors')
-      .where({ slug: this.slug })
-      .fetch()
-      .then((data) => {
-        this.author = data
-      })
   },
 }
 </script>
