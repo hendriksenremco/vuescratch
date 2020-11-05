@@ -68,13 +68,13 @@ export default {
         {
           hid: 'og:url',
           property: 'og:url',
-          content: `https://vuescratch.com/${this.page.slug}`,
+          content: `https://vuescratch.com/${this.page.slug}/`,
         },
       ],
       link: [
         {
           rel: 'canonical',
-          href: `https://vuescratch.com/${this.page.slug}`,
+          href: `https://vuescratch.com/${this.page.slug}/`,
         },
       ],
     }
