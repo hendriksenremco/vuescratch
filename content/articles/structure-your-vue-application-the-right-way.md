@@ -1,7 +1,7 @@
 ---
 title: How to structure your Vue.js application the right way
 author: remcohendriksen
-image: pen-and-paper.jpg
+image: vue-structure-code.jpg
 ---
 
 Structuring a Vue application can big challenge. Especially when your application grows bigger. To keep your project understandable in the long run, you need to force yourself to work a certain way.
