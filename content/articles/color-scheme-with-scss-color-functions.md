@@ -1,7 +1,7 @@
 ---
 title: Creating a color scheme with scss color functions
 author: remcohendriksen
-image: badass-color-scheme.png
+image: badass-color-scheme.jpg
 ---
 
 A balanced color scheme can be easily created by using some math. Picking one base color and calculate all the variants from that is a really simple way to create one.
