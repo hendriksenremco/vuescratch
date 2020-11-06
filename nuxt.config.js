@@ -3,7 +3,7 @@ const createSitemapRoutes = async () => {
   const { $content } = require('@nuxt/content')
   const articles = await $content('articles').fetch()
   for (const article of articles) {
-    routes.push(`/${article.slug}`)
+    routes.push(`/${article.slug}/`)
   }
   return routes
 }
