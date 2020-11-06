@@ -1,16 +1,22 @@
 <template>
-  <div class="article-content">
+  <div class="article-content" theme="tomorrow">
     <slot />
   </div>
 </template>
 <script>
 import Prism from 'prismjs'
-import 'prismjs/themes/prism-tomorrow.css'
 import 'prismjs/components/prism-scss'
 import 'prismjs/components/prism-javascript'
 export default {
   mounted() {
     Prism.highlightAll()
+
+    const prefersDark = window.matchMedia('(prefers-color-scheme: dark)')
+    if (prefersDark.matches) {
+      return require('prismjs/themes/prism-tomorrow.css')
+    } else {
+      return require('prismjs/themes/prism.css')
+    }
   },
 }
 </script>
