@@ -2,28 +2,36 @@
   <div class="article-page">
     <header class="article-page__header">
       <article-breadcrumbs />
-      <h1>{{ page.title }}</h1>
-      <article-background :image="page.image" />
-      <author :author="authors[0]" :date="page.createdAt" />
+      <h1>{{ page.fields.title }}</h1>
+      <article-background :image="page.fields.heroImage.fields.file.url" />
+      <author :author="page.fields.author" :date="page.sys.createdAt" />
     </header>
     <article-content>
-      <nuxt-content :document="page" />
+      <div v-html="markedBody"></div>
       <div ref="comments"></div>
     </article-content>
   </div>
 </template>
 <script>
+import marked from 'marked'
+import { createClient } from '~/plugins/contentful.js'
+const client = createClient()
+
 export default {
-  async asyncData({ $content, params }) {
-    const page = await $content('articles', params.slug).fetch()
-    const authors = await $content('authors')
-      .where({ slug: page.author })
-      .fetch()
+  async asyncData({ params }) {
+    const pages = await client.getEntries({
+      content_type: 'blogPost',
+      'fields.slug': params.slug,
+    })
 
     return {
-      page,
-      authors,
+      page: pages.items[0],
     }
+  },
+  computed: {
+    markedBody() {
+      return marked(this.page.fields.body)
+    },
   },
   mounted() {
     const script = document.createElement('script')
@@ -33,17 +41,16 @@ export default {
     script.setAttribute('theme', 'github-light')
     script.setAttribute('crossorigin', 'anonymous')
     script.setAttribute('async', true)
-
     this.$refs.comments.appendChild(script)
   },
   head() {
     return {
-      title: this.page.title,
+      title: this.page.fields.title,
       meta: [
         {
           hid: 'description',
           name: 'description',
-          content: this.page.body.children[0].children[0].value,
+          content: this.page.fields.description,
         },
         {
           hid: 'og:type',
@@ -53,31 +60,31 @@ export default {
         {
           hid: 'og:title',
           property: 'og:title',
-          content: this.page.title,
+          content: this.page.fields.title,
         },
         {
           hid: 'og:description',
           property: 'og:description',
-          content: this.page.body.children[0].children[0].value,
+          content: this.page.fields.description,
         },
         {
           hid: 'og:image',
           property: 'og:image',
           content:
             'https://vuescratch.com' +
-            require(`~/assets/articles/${this.page.image}`),
+            this.page.fields.heroImage.fields.file.url,
         },
         {
           hid: 'og:url',
           property: 'og:url',
-          content: `https://vuescratch.com/${this.page.slug}/`,
+          content: `https://vuescratch.com/${this.page.fields.slug}/`,
         },
       ],
       link: [
         {
           hid: 'canonical',
           rel: 'canonical',
-          href: `https://vuescratch.com/${this.page.slug}/`,
+          href: `https://vuescratch.com/${this.page.fields.slug}/`,
         },
       ],
     }

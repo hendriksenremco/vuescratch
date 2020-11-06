@@ -2,11 +2,13 @@
   <div v-if="author" class="author">
     <div
       class="author__image"
-      :style="{ backgroundImage: 'url(' + authorImageUrl + ')' }"
+      :style="{
+        backgroundImage: 'url(' + author.fields.image.fields.file.url + ')',
+      }"
     ></div>
     <div class="author__name">
       <div class="author__name__prefix">Author</div>
-      <a href="#" class="author__name__link">{{ author.name }}</a>
+      <a href="#" class="author__name__link">{{ author.fields.name }}</a>
     </div>
     <div class="author__date">
       <div class="author__date__prefix">Published</div>
@@ -27,9 +29,6 @@ export default {
     },
   },
   computed: {
-    authorImageUrl() {
-      return require(`~/assets/authors/${this.author.image}`)
-    },
     dateString() {
       const options = {
         year: 'numeric',

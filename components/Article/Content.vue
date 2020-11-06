@@ -3,6 +3,17 @@
     <slot />
   </div>
 </template>
+<script>
+import Prism from 'prismjs'
+import 'prismjs/themes/prism.css'
+import 'prismjs/components/prism-scss'
+import 'prismjs/components/prism-javascript'
+export default {
+  mounted() {
+    Prism.highlightAll()
+  },
+}
+</script>
 <style lang="scss">
 .article-content {
   background-color: $white;

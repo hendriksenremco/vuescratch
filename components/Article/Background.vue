@@ -1,7 +1,7 @@
 <template>
   <div
     class="article-background"
-    :style="{ backgroundImage: 'url(' + authorImageUrl + ')' }"
+    :style="{ backgroundImage: 'url(' + image + ')' }"
   ></div>
 </template>
 <script>
@@ -10,11 +10,6 @@ export default {
     image: {
       type: String,
       default: '',
-    },
-  },
-  computed: {
-    authorImageUrl() {
-      return require(`~/assets/articles/${this.image}`)
     },
   },
 }
