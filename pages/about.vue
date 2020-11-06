@@ -13,8 +13,8 @@
     <p>
       I will be posting small chunks of code which i build for this site, but
       also make some series which covers building bigger applications. I hope
-      you will enjoy my content and if you got some to say to me, contact me
-      remco@vuescratch.com
+      you will enjoy my content and if you've got some to say to me, contact me
+      at remco@vuescratch.com
     </p>
     <h3>Remco Hendriksen</h3>
   </div>
