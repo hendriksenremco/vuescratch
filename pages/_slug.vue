@@ -75,6 +75,7 @@ export default {
       ],
       link: [
         {
+          hid: 'canonical',
           rel: 'canonical',
           href: `https://vuescratch.com/${this.page.slug}/`,
         },
