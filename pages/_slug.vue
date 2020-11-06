@@ -70,9 +70,7 @@ export default {
         {
           hid: 'og:image',
           property: 'og:image',
-          content:
-            'https://vuescratch.com' +
-            this.page.fields.heroImage.fields.file.url,
+          content: this.page.fields.heroImage.fields.file.url,
         },
         {
           hid: 'og:url',
