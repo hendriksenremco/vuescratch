@@ -5,7 +5,7 @@
 </template>
 <script>
 import Prism from 'prismjs'
-import 'prismjs/themes/prism.css'
+import 'prismjs/themes/prism-tomorrow.css'
 import 'prismjs/components/prism-scss'
 import 'prismjs/components/prism-javascript'
 export default {
@@ -21,6 +21,11 @@ export default {
   border-radius: $spacing * 2;
   padding: $spacing * 8;
 
+  @media (prefers-color-scheme: dark) {
+    background-color: $grey-darker;
+    color: $grey-lighter;
+  }
+
   @media (max-width: #{$breakpoint-tablet}) {
     padding: $spacing * 4;
   }
@@ -30,6 +35,10 @@ export default {
 
   a {
     color: $blue;
+
+    @media (prefers-color-scheme: dark) {
+      color: saturate(lighten($blue, 25%), 20%);
+    }
   }
 }
 </style>
