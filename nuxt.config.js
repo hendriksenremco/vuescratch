@@ -1,9 +1,13 @@
 const createSitemapRoutes = async () => {
   const routes = []
-  const { $content } = require('@nuxt/content')
-  const articles = await $content('articles').fetch()
-  for (const article of articles) {
-    routes.push(`/${article.slug}/`)
+  const { createClient } = require('./plugins/contentful.js')
+  const client = createClient()
+  const articles = await client.getEntries({
+    content_type: 'blogPost',
+    order: '-sys.createdAt',
+  })
+  for (const article of articles.items) {
+    routes.push(`/${article.fields.slug}/`)
   }
   return routes
 }

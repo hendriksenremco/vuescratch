@@ -24,18 +24,6 @@ export default {
       content_type: 'blogPost',
       order: '-sys.createdAt',
     })
-    // const articles = await $content('articles')
-    //   .sortBy('createdAt', 'desc')
-    //   .limit(5)
-    //   .fetch()
-    //   .catch((err) => {
-    //     error({ statusCode: 404, message: err.message })
-    //   })
-    // const authors = await $content('authors').fetch()
-    // return {
-    //   articles,
-    //   authors,
-    // }
 
     return {
       articles,
