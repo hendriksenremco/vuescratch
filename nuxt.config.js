@@ -77,6 +77,10 @@ export default {
         href:
           'https://fonts.googleapis.com/css2?family=Merriweather:wght@400;700&family=Raleway:wght@400;800&display=swap',
       },
+      {
+        rel: 'canonical',
+        href: `https://vuescratch.com/`,
+      },
     ],
   },
 
