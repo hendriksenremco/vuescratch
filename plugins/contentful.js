@@ -1,15 +1,16 @@
 const contentful = require('contentful')
 // use default environment config for convenience
 // these will be set via `env` property in nuxt.config.js
+
 const config = {
   space: '9v9v1k9l1c6k',
-  accessToken: '5TmRrmVOZLb1sqC7xss4aevaED7o-CWGMbF-NmDbCkw',
+  accessToken: process.env.CF_ACCESS_TOKEN,
   host: 'cdn.contentful.com',
 }
 
 const previewConfig = {
   space: '9v9v1k9l1c6k',
-  accessToken: 'aCWoN78WRHFTYcuhddpTCMX7ALDFLmuusNKRjFPe3Hw',
+  accessToken: process.env.CF_PREVIEW_TOKEN,
   host: 'preview.contentful.com',
 }
 
