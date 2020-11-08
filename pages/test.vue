@@ -1,10 +1,5 @@
 <template>
-  <form
-    name="contact"
-    method="POST"
-    data-netlify="true"
-    @submit.prevent="onSubmit"
-  >
+  <form name="contact" method="POST" @submit.prevent="onSubmit">
     <p>
       <label>Your Name: <input v-model="name" type="text" name="name" /></label>
     </p>
@@ -34,13 +29,16 @@ export default {
   },
   methods: {
     onSubmit() {
-      this.$axios.post('/.netlify/functions/post-submissions', {
-        name: this.name,
-        email: this.email,
-        message: this.message,
-        type: 'contact',
-        path: this.$route.path,
-      })
+      this.$axios.post(
+        'https://vuescratch.com/.netlify/functions/post-submissions',
+        {
+          name: this.name,
+          email: this.email,
+          message: this.message,
+          type: 'contact',
+          path: this.$route.path,
+        }
+      )
     },
   },
 }
