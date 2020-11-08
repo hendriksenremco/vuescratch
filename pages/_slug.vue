@@ -14,15 +14,28 @@
 </template>
 <script>
 import marked from 'marked'
-import { createClient } from '~/plugins/contentful.js'
+import { createClient, createPreviewClient } from '~/plugins/contentful.js'
 const client = createClient()
 
 export default {
-  async asyncData({ params }) {
-    const pages = await client.getEntries({
+  async asyncData({ params, error }) {
+    let pages = null
+    pages = await client.getEntries({
       content_type: 'blogPost',
       'fields.slug': params.slug,
     })
+
+    if (!pages.items.length) {
+      const previewClient = createPreviewClient()
+      pages = await previewClient.getEntries({
+        content_type: 'blogPost',
+        'fields.slug': params.slug,
+      })
+    }
+
+    if (!pages.items.length) {
+      error({ statusCode: 404, message: 'article_not_found' })
+    }
 
     return {
       page: pages.items[0],

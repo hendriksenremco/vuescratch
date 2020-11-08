@@ -11,6 +11,19 @@ const createSitemapRoutes = async () => {
   }
   return routes
 }
+const createPreviewRoutes = async () => {
+  const previewRoutes = []
+  const { createPreviewClient } = require('./plugins/contentful.js')
+  const client = createPreviewClient()
+  const articles = await client.getEntries({
+    content_type: 'blogPost',
+    order: '-sys.createdAt',
+  })
+  for (const article of articles.items) {
+    previewRoutes.push(`/${article.fields.slug}/`)
+  }
+  return previewRoutes
+}
 
 export default {
   // Target (https://go.nuxtjs.dev/config-target)
@@ -19,6 +32,12 @@ export default {
   server: {
     host: '0.0.0.0',
   },
+
+  generate: {
+    fallback: true,
+    routes: createPreviewRoutes,
+  },
+
   // Global page headers (https://go.nuxtjs.dev/config-head)
   head: {
     titleTemplate: (titleChunk) => {
