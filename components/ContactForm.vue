@@ -1,5 +1,5 @@
 <template>
-  <form class="contact-form" @submit.prevent="onSubmit">
+  <form class="contact-form" method="POST" @submit.prevent="onSubmit">
     <form-input
       v-if="!success"
       v-model="beer"
