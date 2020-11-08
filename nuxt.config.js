@@ -145,7 +145,7 @@ export default {
   sitemap: {
     hostname: 'https://vuescratch.com',
     gzip: true,
-    exclude: ['/articles'],
+    exclude: ['/articles', '/test'],
     routes: createSitemapRoutes,
   },
   // Build Configuration (https://go.nuxtjs.dev/config-build)
