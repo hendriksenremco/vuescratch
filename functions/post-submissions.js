@@ -5,6 +5,7 @@ exports.handler = function (event) {
   })
 
   const body = JSON.parse(event.body)
+  console.log(event.body)
   // Create entry.
   return client
     .getSpace('9v9v1k9l1c6k')
