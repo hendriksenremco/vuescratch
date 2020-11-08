@@ -28,10 +28,17 @@ export default {
   display: flex;
   flex-direction: column;
 
+  &__label {
+    font-family: $font-heading;
+    font-weight: 700;
+    padding: $spacing 0;
+  }
+
   &__input {
     border: 1px solid $grey-lighter;
     border-radius: $spacing;
     font-size: 1rem;
+    font-family: $font-base;
     padding: $spacing * 2;
     margin: 0;
 
