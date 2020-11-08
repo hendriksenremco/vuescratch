@@ -3,9 +3,9 @@ exports.handler = function (event) {
   const client = contentful.createClient({
     accessToken: process.env.CF_MANAGEMENT_TOKEN,
   })
-
-  const body = JSON.parse(event.body)
   console.log(event.body)
+  const body = JSON.parse(event.body)
+
   // Create entry.
   return client
     .getSpace('9v9v1k9l1c6k')
