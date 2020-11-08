@@ -4,6 +4,7 @@ exports.handler = function (event) {
     accessToken: process.env.CF_MANAGEMENT_TOKEN,
   })
 
+  console.log(event)
   // Create entry.
   return client
     .getSpace('9v9v1k9l1c6k')

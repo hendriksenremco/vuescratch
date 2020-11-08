@@ -29,15 +29,15 @@ export default {
   },
   methods: {
     onSubmit() {
+      const formData = new FormData()
+      formData.append('name', this.name)
+      formData.append('email', this.email)
+      formData.append('message', this.message)
+      formData.append('type', 'contract')
+      formData.append('path', this.$route.path)
       this.$axios.post(
         'https://vuescratch.com/.netlify/functions/post-submissions',
-        {
-          name: this.name,
-          email: this.email,
-          message: this.message,
-          type: 'contact',
-          path: this.$route.path,
-        }
+        formData
       )
     },
   },
