@@ -1,11 +1,28 @@
 const createSitemapRoutes = async () => {
   const routes = []
-  const { $content } = require('@nuxt/content')
-  const articles = await $content('articles').fetch()
-  for (const article of articles) {
-    routes.push(`/${article.slug}`)
+  const { createClient } = require('./plugins/contentful.js')
+  const client = createClient()
+  const articles = await client.getEntries({
+    content_type: 'blogPost',
+    order: '-sys.createdAt',
+  })
+  for (const article of articles.items) {
+    routes.push(`/${article.fields.slug}/`)
   }
   return routes
+}
+const createPreviewRoutes = async () => {
+  const previewRoutes = []
+  const { createPreviewClient } = require('./plugins/contentful.js')
+  const client = createPreviewClient()
+  const articles = await client.getEntries({
+    content_type: 'blogPost',
+    order: '-sys.createdAt',
+  })
+  for (const article of articles.items) {
+    previewRoutes.push(`/${article.fields.slug}/`)
+  }
+  return previewRoutes
 }
 
 export default {
@@ -15,6 +32,12 @@ export default {
   server: {
     host: '0.0.0.0',
   },
+
+  generate: {
+    fallback: true,
+    routes: createPreviewRoutes,
+  },
+
   // Global page headers (https://go.nuxtjs.dev/config-head)
   head: {
     titleTemplate: (titleChunk) => {
@@ -77,6 +100,11 @@ export default {
         href:
           'https://fonts.googleapis.com/css2?family=Merriweather:wght@400;700&family=Raleway:wght@400;800&display=swap',
       },
+      {
+        hid: 'canonical',
+        rel: 'canonical',
+        href: `https://vuescratch.com/`,
+      },
     ],
   },
 
@@ -84,7 +112,7 @@ export default {
   css: [],
 
   // Plugins to run before rendering page (https://go.nuxtjs.dev/config-plugins)
-  plugins: [],
+  plugins: ['~/plugins/contentful.js'],
 
   // Auto import components (https://go.nuxtjs.dev/config-components)
   components: [
@@ -102,8 +130,7 @@ export default {
 
   // Modules (https://go.nuxtjs.dev/config-modules)
   modules: [
-    // https://go.nuxtjs.dev/content
-    '@nuxt/content',
+    '@nuxtjs/axios',
     '@nuxtjs/style-resources',
     '@nuxtjs/sitemap',
     'nuxt-rfg-icon',
@@ -120,7 +147,7 @@ export default {
   sitemap: {
     hostname: 'https://vuescratch.com',
     gzip: true,
-    exclude: ['/articles'],
+    exclude: ['/articles', '/test'],
     routes: createSitemapRoutes,
   },
   // Build Configuration (https://go.nuxtjs.dev/config-build)

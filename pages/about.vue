@@ -1,16 +1,34 @@
 <template>
-  <div class="container">
-    <nuxt-content :document="page" />
+  <div class="container about">
+    <h1>About VueScratch</h1>
+    <p>
+      VueScratch is a site all about building awesome Vue applications.
+      Encouraging developers to build more functionality from scratch, without
+      the need of an external framework.
+    </p>
+    <p>
+      It is extremely fun to get things done yourself, and it gives you the most
+      control over the code.
+    </p>
+    <p>
+      I will be posting small chunks of code which i build for this site, but
+      also make some series which covers building bigger applications. I hope
+      you will enjoy my content and if you've got some to say to me, contact me
+      at remco@vuescratch.com
+    </p>
+    <h3>Remco Hendriksen</h3>
   </div>
 </template>
-<script>
-export default {
-  async asyncData({ $content, params }) {
-    const page = await $content('about', params.slug).fetch()
+<style lang="scss">
+.about {
+  background: radial-gradient(
+      ellipse closest-side,
+      rgba($black, 0.75),
+      rgba($black, 1)
+    ),
+    url('~assets/authors/remco.jpg');
 
-    return {
-      page,
-    }
-  },
+  background-repeat: no-repeat;
+  background-size: cover;
 }
-</script>
+</style>

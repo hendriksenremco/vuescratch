@@ -25,7 +25,6 @@
 
 <style lang="scss">
 .logo {
-  animation: 1s appear;
   display: flex;
 
   svg {

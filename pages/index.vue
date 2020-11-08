@@ -1,36 +1,32 @@
 <template>
   <div class="home-page container">
     <article-summary
-      v-for="article in articles"
-      :key="article.slug"
-      :date="article.createdAt"
-      :author="author('remcohendriksen')"
-      :image="article.image"
-      :author-image="article.authorImage"
-      :slug="article.slug"
-      :title="article.title"
+      v-for="article in articles.items"
+      :key="article.fields.slug"
+      :date="article.sys.createdAt"
+      :author="article.fields.author"
+      :image="article.fields.heroImage.fields.file.url"
+      :slug="article.fields.slug"
+      :title="article.fields.title"
     >
-      {{ article.body.children[0].children[0].value }}
+      {{ article.fields.description }}
     </article-summary>
   </div>
 </template>
 
 <script>
-export default {
-  async asyncData({ $content, error }) {
-    const articles = await $content('articles')
-      .sortBy('createdAt', 'desc')
-      .limit(5)
-      .fetch()
-      .catch((err) => {
-        error({ statusCode: 404, message: err.message })
-      })
+import { createClient } from '~/plugins/contentful.js'
 
-    const authors = await $content('authors').fetch()
+const client = createClient()
+export default {
+  async asyncData() {
+    const articles = await client.getEntries({
+      content_type: 'blogPost',
+      order: '-sys.createdAt',
+    })
 
     return {
       articles,
-      authors,
     }
   },
 
