@@ -3,7 +3,8 @@ exports.handler = function (event) {
   const client = contentful.createClient({
     accessToken: process.env.CF_MANAGEMENT_TOKEN,
   })
-  const body = JSON.parse(event)
+  console.log(event)
+  const body = JSON.parse(event.body)
 
   // Create entry.
   return client
