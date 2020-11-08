@@ -128,7 +128,7 @@ export default {
 
   // Modules (https://go.nuxtjs.dev/config-modules)
   modules: [
-    '@nuxtjs/amp',
+    '@nuxtjs/axios',
     '@nuxtjs/style-resources',
     '@nuxtjs/sitemap',
     'nuxt-rfg-icon',

@@ -34,15 +34,13 @@ export default {
   },
   methods: {
     onSubmit() {
-      this.$axios
-        .post(this.$el.getAttribute('action'), {
-          name: this.name,
-          email: this.email,
-          message: this.message,
-        })
-        .then((result) => {
-          console.log(result)
-        })
+      this.$axios.post('/.netlify/functions/post-submissions', {
+        name: this.name,
+        email: this.email,
+        message: this.message,
+        type: 'contact',
+        path: this.$route.path,
+      })
     },
   },
 }
