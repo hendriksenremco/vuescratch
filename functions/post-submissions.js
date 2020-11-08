@@ -4,7 +4,7 @@ exports.handler = function (event) {
     accessToken: process.env.CF_MANAGEMENT_TOKEN,
   })
 
-  console.log(event)
+  const body = JSON.parse(event.body)
   // Create entry.
   return client
     .getSpace('9v9v1k9l1c6k')
@@ -13,19 +13,19 @@ exports.handler = function (event) {
       environment.createEntry('submission', {
         fields: {
           name: {
-            'en-US': event.body.name || null,
+            'en-US': body.name || null,
           },
           email: {
-            'en-US': event.body.email || null,
+            'en-US': body.email || null,
           },
           message: {
-            'en-US': event.body.message || null,
+            'en-US': body.message || null,
           },
           type: {
-            'en-US': event.body.type || null,
+            'en-US': body.type || null,
           },
           path: {
-            'en-US': event.body.path || null,
+            'en-US': body.path || null,
           },
         },
       })
