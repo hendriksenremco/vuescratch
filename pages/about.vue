@@ -1,5 +1,5 @@
 <template>
-  <div class="container">
+  <div class="container about">
     <h1>About VueScratch</h1>
     <p>
       VueScratch is a site all about building awesome Vue applications.
@@ -19,3 +19,16 @@
     <h3>Remco Hendriksen</h3>
   </div>
 </template>
+<style lang="scss">
+.about {
+  background: radial-gradient(
+      ellipse closest-side,
+      rgba($black, 0.75),
+      rgba($black, 1)
+    ),
+    url('~assets/authors/remco.jpg');
+
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+</style>
