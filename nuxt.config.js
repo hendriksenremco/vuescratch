@@ -163,4 +163,9 @@ export default {
   router: {
     trailingSlash: true,
   },
+
+  env: {
+    CF_ACCESS_TOKEN: process.env.CF_ACCESS_TOKEN,
+    CF_PREVIEW_TOKEN: process.env.CF_PREVIEW_TOKEN,
+  },
 }
