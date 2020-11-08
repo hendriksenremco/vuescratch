@@ -1,5 +1,5 @@
 <template>
-  <nuxt-link class="logo" :to="{ path: '/' }">
+  <nuxt-link class="logo" :to="{ name: 'index' }">
     <svg
       width="155"
       height="22"
