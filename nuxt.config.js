@@ -106,6 +106,12 @@ export default {
         href: `https://vuescratch.com/`,
       },
     ],
+    script: [
+      {
+        type: 'application/ld+json',
+        json: {},
+      },
+    ],
   },
 
   // Global CSS (https://go.nuxtjs.dev/config-css)
