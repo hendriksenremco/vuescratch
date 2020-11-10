@@ -2,14 +2,19 @@
   <div class="socials">
     <a
       href="https://facebook.com/VueScratch-114362063809302"
+      title="Facebook"
       class="socials__item"
     >
       <icon-facebook />
     </a>
-    <a href="https://twitter.com/VueScratch" class="socials__item">
+    <a
+      href="https://twitter.com/VueScratch"
+      class="socials__item"
+      title="Twitter"
+    >
       <icon-twitter />
     </a>
-    <a href="/feed.rss" class="socials__item">
+    <a href="/feed.rss" title="RSS" class="socials__item">
       <icon-rss />
     </a>
   </div>
