@@ -136,6 +136,7 @@ export default {
     '@nuxtjs/sitemap',
     'nuxt-rfg-icon',
     '@nuxtjs/google-gtag',
+    '@nuxtjs/amp',
   ],
 
   // Content module configuration (https://go.nuxtjs.dev/config-content)

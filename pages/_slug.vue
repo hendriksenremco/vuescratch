@@ -41,6 +41,11 @@ export default {
       page: pages.items[0],
     }
   },
+  data() {
+    return {
+      modal: true,
+    }
+  },
   computed: {
     markedBody() {
       return marked(this.page.fields.body)
