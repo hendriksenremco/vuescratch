@@ -171,6 +171,7 @@ export default {
     { path: '~/components/Article/', prefix: 'article' },
     { path: '~/components/Comments/', prefix: 'comments' },
     { path: '~/components/Form/', prefix: 'form' },
+    { path: '~/components/Icons/', prefix: 'icon' },
   ],
   // Modules for dev and build (recommended) (https://go.nuxtjs.dev/config-modules)
   buildModules: [
@@ -187,7 +188,34 @@ export default {
     '@nuxtjs/sitemap',
     'nuxt-rfg-icon',
     '@nuxtjs/google-gtag',
+    '@nuxtjs/feed',
     // '@nuxtjs/amp',
+  ],
+
+  feed: [
+    {
+      path: '/feed.rss',
+      create: async (feed) => {
+        const { createClient } = require('./plugins/contentful.js')
+        const marked = require('marked')
+        const client = createClient()
+        const articles = await client.getEntries({
+          content_type: 'blogPost',
+          order: '-sys.createdAt',
+        })
+        for (const article of articles.items) {
+          feed.addItem({
+            title: article.fields.title,
+            id: article.fields.slug,
+            link: `https://vuescratch.com/${article.fields.slug}`,
+            description: article.fields.description,
+            content: marked(article.fields.body),
+          })
+        }
+      },
+      cacheTime: 1000 * 60 * 15, // How long should the feed be cached
+      type: 'rss2',
+    },
   ],
 
   // Content module configuration (https://go.nuxtjs.dev/config-content)
