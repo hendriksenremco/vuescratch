@@ -1,6 +1,7 @@
 <template>
   <div class="article-page">
     <header class="article-page__header">
+      {{ page.sys }}
       <article-breadcrumbs />
       <h1>{{ page.fields.title }}</h1>
       <article-background :image="page.fields.heroImage.fields.file.url" />
@@ -120,6 +121,7 @@ export default {
               name: this.page.fields.author.fields.name,
             },
             datePublished: this.page.sys.createdAt,
+            dateModified: this.page.sys.updatedAt,
             image: this.page.fields.heroImage.fields.file.url,
             articleBody: this.markedBody,
             url: `https://vuescratch.com/${this.page.fields.slug}/`,
