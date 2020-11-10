@@ -95,6 +95,12 @@ export default {
     ],
     link: [
       {
+        rel: 'alternate',
+        type: 'application/rss+xml',
+        title: 'RSS 2.0',
+        href: 'https://vuescratch.com/feed.rss',
+      },
+      {
         rel: 'stylesheet',
         href:
           'https://fonts.googleapis.com/css2?family=Merriweather:wght@400;700&family=Raleway:wght@400;800&display=swap',
