@@ -95,6 +95,41 @@ export default {
           property: 'og:url',
           content: `https://vuescratch.com/${this.page.fields.slug}/`,
         },
+        {
+          hid: 'twitter:card',
+          property: 'twitter:card',
+          content: 'summary_large_image',
+        },
+        {
+          hid: 'twitter:title',
+          property: 'twitter:title',
+          content: this.page.fields.title,
+        },
+        {
+          hid: 'twitter:description',
+          property: 'twitter:description',
+          content: this.page.fields.description,
+        },
+        {
+          hid: 'twitter:site',
+          property: 'twitter:site',
+          content: '@vuescratch',
+        },
+        {
+          hid: 'twitter:creator',
+          property: 'twitter:creator',
+          content: '@vuescratch',
+        },
+        {
+          hid: 'twitter:image',
+          property: 'twitter:image',
+          content: 'https:' + this.page.fields.heroImage.fields.file.url,
+        },
+        {
+          hid: 'og:url',
+          property: 'og:url',
+          content: `https://vuescratch.com/${this.page.fields.slug}/`,
+        },
       ],
       link: [
         {
