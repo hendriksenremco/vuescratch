@@ -109,7 +109,25 @@ export default {
     script: [
       {
         type: 'application/ld+json',
-        json: {},
+        json: {
+          '@context': 'https://schema.org',
+          '@type': 'CollectionPage',
+          '@id': 'https://vuescratch.com',
+          url: 'https://vuescratch.com',
+          name: 'VueScratch',
+          description:
+            'Developing Vue applications from scratch with Vue.js, NuxtJS and SCSS.',
+          inLanguage: 'en-US',
+          isPartOf: {
+            '@type': 'Website',
+            '@id': 'https://vuescratch.com/#website',
+            url: 'https://vuescratch.com',
+            name: 'VueScratch',
+            description:
+              'Developing Vue applications from scratch with Vue.js, NuxtJS and SCSS.',
+            inLanguage: 'en-Us',
+          },
+        },
       },
     ],
   },
