@@ -10,7 +10,6 @@ import 'prismjs/components/prism-javascript'
 export default {
   mounted() {
     Prism.highlightAll()
-    console.log(Prism)
 
     const prefersDark = window.matchMedia('(prefers-color-scheme: dark)')
     if (prefersDark.matches) {

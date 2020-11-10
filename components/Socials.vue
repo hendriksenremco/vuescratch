@@ -28,8 +28,8 @@
   svg {
     cursor: pointer;
     fill: $grey;
-    width: $spacing * 8;
-    height: $spacing * 8;
+    width: $spacing * 4;
+    height: $spacing * 4;
 
     &:hover {
       fill: $white;

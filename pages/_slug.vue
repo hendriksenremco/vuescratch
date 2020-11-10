@@ -10,6 +10,18 @@
       <div v-html="markedBody"></div>
       <div ref="comments"></div>
     </article-content>
+    <div class="article-page__related">
+      <h2 class="article-page__related__title">More to read</h2>
+      <div class="article-page__related__items">
+        <article-card
+          v-for="article in related"
+          :key="article.fields.slug"
+          :title="article.fields.title"
+          :slug="article.fields.slug"
+          :description="article.fields.description"
+        />
+      </div>
+    </div>
   </div>
 </template>
 <script>
@@ -23,6 +35,13 @@ export default {
     pages = await client.getEntries({
       content_type: 'blogPost',
       'fields.slug': params.slug,
+    })
+
+    const related = await client.getEntries({
+      content_type: 'blogPost',
+      'fields.slug[ne]': params.slug,
+      order: '-sys.createdAt',
+      limit: 2,
     })
 
     if (!pages.items.length) {
@@ -39,6 +58,7 @@ export default {
 
     return {
       page: pages.items[0],
+      related: related.items,
     }
   },
   data() {
@@ -174,9 +194,24 @@ export default {
     @media (max-width: #{$breakpoint-tablet}) {
       padding: $spacing * 4;
     }
+  }
 
-    @media (max-width: #{$breakpoint-mobile}) {
-      padding: $spacing * 2;
+  &__related {
+    padding: $spacing * 4 0;
+
+    &__title {
+      color: $grey-dark;
+      padding: 0 $spacing * 2;
+    }
+
+    &__items {
+      display: grid;
+      grid-gap: $spacing * 2;
+      grid-template-columns: 1fr 1fr;
+      @media (max-width: #{$breakpoint-mobile}) {
+        grid-template-columns: 1fr;
+        padding: $spacing * 2;
+      }
     }
   }
 
