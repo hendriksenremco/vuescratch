@@ -46,7 +46,6 @@ export default {
     },
     htmlAttrs: {
       lang: 'en',
-      amp: true,
     },
     meta: [
       { charset: 'utf-8' },
@@ -188,7 +187,7 @@ export default {
     '@nuxtjs/sitemap',
     'nuxt-rfg-icon',
     '@nuxtjs/google-gtag',
-    '@nuxtjs/amp',
+    // '@nuxtjs/amp',
   ],
 
   // Content module configuration (https://go.nuxtjs.dev/config-content)

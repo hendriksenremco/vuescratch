@@ -125,11 +125,6 @@ export default {
           property: 'twitter:image',
           content: 'https:' + this.page.fields.heroImage.fields.file.url,
         },
-        {
-          hid: 'og:url',
-          property: 'og:url',
-          content: `https://vuescratch.com/${this.page.fields.slug}/`,
-        },
       ],
       link: [
         {
