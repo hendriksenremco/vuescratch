@@ -1,7 +1,6 @@
 <template>
   <div class="article-page">
     <header class="article-page__header">
-      {{ page.sys }}
       <article-breadcrumbs />
       <h1>{{ page.fields.title }}</h1>
       <article-background :image="page.fields.heroImage.fields.file.url" />
