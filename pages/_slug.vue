@@ -88,7 +88,7 @@ export default {
         {
           hid: 'og:image',
           property: 'og:image',
-          content: this.page.fields.heroImage.fields.file.url,
+          content: 'https:' + this.page.fields.heroImage.fields.file.url,
         },
         {
           hid: 'og:url',
@@ -121,7 +121,7 @@ export default {
             },
             datePublished: this.page.sys.createdAt,
             dateModified: this.page.sys.updatedAt,
-            image: this.page.fields.heroImage.fields.file.url,
+            image: 'https:' + this.page.fields.heroImage.fields.file.url,
             articleBody: this.markedBody,
             url: `https://vuescratch.com/${this.page.fields.slug}/`,
           },

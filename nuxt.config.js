@@ -112,7 +112,7 @@ export default {
         json: {
           '@context': 'https://schema.org',
           '@type': 'CollectionPage',
-          '@id': 'https://vuescratch.com',
+          '@id': 'https://vuescratch.com#webpage',
           url: 'https://vuescratch.com',
           name: 'VueScratch',
           description:
@@ -125,7 +125,35 @@ export default {
             name: 'VueScratch',
             description:
               'Developing Vue applications from scratch with Vue.js, NuxtJS and SCSS.',
-            inLanguage: 'en-Us',
+            inLanguage: 'en-US',
+          },
+          about: {
+            '@type': 'Organization',
+            '@id': 'https://vuescratch.com#organization',
+            name: 'VueScratch',
+            url: 'https://vuescratch.com',
+            sameAs: 'https://twitter.com/vuescratch',
+            logo: {
+              '@type': 'ImageObject',
+              '@id': 'https://vuescratch.com/#logo',
+              inLanguage: 'en-US',
+              url: 'https://vuescratch.com/icon.png',
+              caption: 'VueScratch',
+            },
+            image: {
+              '@type': 'ImageObject',
+              '@id': 'https://vuescratch.com/#logo',
+              inLanguage: 'en-US',
+              url: 'https://vuescratch.com/icon.png',
+              caption: 'VueScratch',
+            },
+            potentialAction: {
+              '@type': 'ReadAction',
+              target: {
+                '@type': 'EntryPoint',
+                urlTemplate: 'https://vuescratch.com/',
+              },
+            },
           },
         },
       },
