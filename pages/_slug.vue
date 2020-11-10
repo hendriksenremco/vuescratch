@@ -103,6 +103,24 @@ export default {
           href: `https://vuescratch.com/${this.page.fields.slug}/`,
         },
       ],
+      script: [
+        {
+          type: 'application/ld+json',
+          json: {
+            '@context': 'http://schema.org',
+            '@type': 'Article',
+            name: this.page.fields.title,
+            author: {
+              '@type': 'Person',
+              name: this.page.fields.author.fields.name,
+            },
+            datePublished: this.page.sys.createdAt,
+            image: this.page.fields.heroImage.fields.file.url,
+            articleBody: this.markedBody,
+            url: `https://vuescratch.com/${this.page.fields.slug}/`,
+          },
+        },
+      ],
     }
   },
 }
