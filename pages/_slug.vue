@@ -110,7 +110,12 @@ export default {
             '@context': 'http://schema.org',
             '@type': 'Article',
             name: this.page.fields.title,
+            headline: this.page.fields.title,
             author: {
+              '@type': 'Person',
+              name: this.page.fields.author.fields.name,
+            },
+            publisher: {
               '@type': 'Person',
               name: this.page.fields.author.fields.name,
             },
