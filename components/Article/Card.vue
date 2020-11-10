@@ -37,6 +37,7 @@ export default {
 
   p {
     color: $grey;
+    flex: 1;
   }
 }
 </style>

@@ -197,20 +197,24 @@ export default {
   }
 
   &__related {
-    padding: $spacing * 4 0;
+    padding: $spacing * 2 0;
+
+    @media (max-width: #{$breakpoint-tablet}) {
+      padding: $spacing * 4;
+    }
 
     &__title {
-      color: $grey-dark;
-      padding: 0 $spacing * 2;
+      color: $grey-darker;
+      margin-top: $spacing * 2;
+      font-size: 2.5rem;
     }
 
     &__items {
       display: grid;
-      grid-gap: $spacing * 2;
+      grid-gap: $spacing * 4;
       grid-template-columns: 1fr 1fr;
       @media (max-width: #{$breakpoint-mobile}) {
         grid-template-columns: 1fr;
-        padding: $spacing * 2;
       }
     }
   }
