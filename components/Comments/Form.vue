@@ -31,7 +31,7 @@
     <button v-if="!success" type="submit">Submit</button>
     <div v-if="success" class="comments-form__success">
       <h3>Thanks for contributing!</h3>
-      <div>Your comment will be shown here soon</div>
+      <div>Your comment will soon be shown here.</div>
     </div>
   </form>
 </template>

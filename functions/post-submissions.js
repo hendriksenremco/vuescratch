@@ -31,7 +31,7 @@ exports.handler = function (event) {
         },
       })
     })
-    .then((entry) => {
-      entry.publish()
-    })
+    .then((entry) => entry.publish())
+    .then((entry) => console.log(`Entry ${entry.sys.id} published.`))
+    .catch(console.error)
 }
