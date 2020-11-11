@@ -41,6 +41,7 @@ export default {
   &__input {
     border: 1px solid $grey-lighter;
     border-radius: $spacing;
+    box-shadow: none;
     font-size: 1rem;
     font-family: $font-base;
     padding: $spacing * 2;

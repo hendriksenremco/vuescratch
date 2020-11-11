@@ -2,20 +2,21 @@ button,
 .button {
   align-items: center;
   justify-content: center;
-  border: 1px solid $grey-darker;
-  background-color: $black;
+  background-color: $accent;
   border-radius: $spacing;
-  color: $white;
+  border: 0;
+  color: $black;
   cursor: pointer;
   display: flex;
-  font-size: 1.25rem;
+  font-size: 1rem;
   font-weight: 700;
   font-family: $font-heading;
-  padding: $spacing * 1 $spacing * 3;
+  max-width: 320px;
+  padding: $spacing * 2 $spacing * 3;
   appearance: none;
 
   &:hover {
-    background-color: $grey-darker;
+    background-color: darken($accent, 10%);
   }
 
   &--icon {
