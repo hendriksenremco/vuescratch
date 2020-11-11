@@ -10,8 +10,8 @@ exports.handler = function (event) {
   return client
     .getSpace('9v9v1k9l1c6k')
     .then((space) => space.getEnvironment('master'))
-    .then((environment) =>
-      environment.createEntry('submission', {
+    .then((environment) => {
+      return environment.createEntry('submission', {
         fields: {
           name: {
             'en-US': body.name || null,
@@ -30,7 +30,7 @@ exports.handler = function (event) {
           },
         },
       })
-    )
+    })
     .then((entry) => {
       entry.publish()
     })
