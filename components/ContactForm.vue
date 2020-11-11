@@ -69,7 +69,7 @@ export default {
 .contact-form {
   max-width: $breakpoint-mobile;
   display: grid;
-  grid-gap: $spacing * 2;
+  grid-gap: $spacing * 4;
 
   &__beer {
     position: absolute;
