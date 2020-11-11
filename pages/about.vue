@@ -14,7 +14,7 @@
       I will be posting small chunks of code which i build for this site, but
       also make some series which covers building bigger applications. I hope
       you will enjoy my content and if you've got some to say to me, use the
-      contact form below to contact me.
+      form below to contact me.
     </p>
 
     <contact-form />

@@ -47,7 +47,7 @@ export default {
 
   methods: {
     onSubmit() {
-      if (this.beer) {
+      if (this.beer || !this.email || !this.message) {
         return false
       }
       this.$axios
@@ -67,9 +67,12 @@ export default {
 </script>
 <style lang="scss">
 .contact-form {
+  background-color: var(--section-bg);
+  border-radius: $border-radius * 2;
   max-width: $breakpoint-mobile;
   display: grid;
-  grid-gap: $spacing * 4;
+  grid-gap: $spacing * 2;
+  padding: $spacing * 4;
 
   &__beer {
     position: absolute;
