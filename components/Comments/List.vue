@@ -1,23 +1,45 @@
 <template>
-  <div class="comments-list">
+  <div v-if="items.length" class="comments-list">
     <h2 class="comments-list__title">Comments</h2>
-    <div v-for="n in 6" :id="n" :key="n" class="comments-list__item">
-      <a class="comments-list__item__anchor" :href="'#' + n">#</a>
-      <h3 class="comments-list__item__title">Remco Hendriksen</h3>
-      <date class="comments-list__item__date">11-11-2020</date>
+    <div
+      v-for="comment in items"
+      :id="comment.sys.id"
+      :key="comment.sys.id"
+      class="comments-list__item"
+    >
+      <a class="comments-list__item__anchor" :href="'#' + comment.sys.id">#</a>
+      <h3 class="comments-list__item__title">{{ comment.fields.name }}</h3>
+      <date class="comments-list__item__date">{{
+        formatDate(comment.sys.createdAt)
+      }}</date>
       <div class="comments-list__item__content">
-        <p>
-          Really great article. It saved my life today. Thanks alot. Keep up the
-          good work!
-        </p>
-        <p>
-          Really great article. It saved my life today. Thanks alot. Keep up the
-          good work!
-        </p>
+        {{ comment.fields.message }}
       </div>
     </div>
   </div>
 </template>
+<script>
+export default {
+  props: {
+    items: {
+      type: Object,
+      default: null,
+    },
+  },
+  methods: {
+    formatDate(date) {
+      const options = {
+        year: 'numeric',
+        month: 'long',
+        day: 'numeric',
+      }
+      const dtFormat = new Intl.DateTimeFormat('en-EN', options)
+
+      return dtFormat.format(new Date(date))
+    },
+  },
+}
+</script>
 <style lang="scss">
 .comments-list {
   display: grid;

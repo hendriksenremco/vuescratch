@@ -15,7 +15,7 @@
       <!-- <div ref="comments"></div> -->
     </article-content>
 
-    <!-- <comments-list :slug="page.fields.slug" /> -->
+    <comments-list :items="comments" />
     <comments-form :slug="page.fields.slug" />
 
     <related-articles :articles="related" />
@@ -32,6 +32,11 @@ export default {
     pages = await client.getEntries({
       content_type: 'blogPost',
       'fields.slug': params.slug,
+    })
+
+    const comments = await client.getEntries({
+      content_type: 'submission',
+      'fields.path': params.slug,
     })
 
     const related = await client.getEntries({
@@ -56,6 +61,7 @@ export default {
     return {
       page: pages.items[0],
       related: related.items,
+      comments: comments.items,
     }
   },
   data() {
