@@ -87,11 +87,11 @@ export default {
       font-size: 1.2rem;
     }
     &__date {
-      opacity: 75%;
+      font-family: $font-heading;
+      color: $grey;
       font-size: 0.8rem;
     }
     &__content {
-      font-size: 0.9rem;
       margin-top: $spacing * 2;
       p:last-child {
         margin-bottom: 0;
