@@ -6,7 +6,11 @@
       }}</nuxt-link>
     </h1>
     <article-background :image="image" />
-    <author :author="author" :date="date" />
+    <author
+      :author="author.fields.name"
+      :image="author.fields.image.fields.file.url"
+      :date="date"
+    />
     <p class="article-summary__text">
       <slot />
     </p>

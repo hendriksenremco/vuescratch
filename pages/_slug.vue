@@ -4,12 +4,20 @@
       <article-breadcrumbs />
       <h1>{{ page.fields.title }}</h1>
       <article-background :image="page.fields.heroImage.fields.file.url" />
-      <author :author="page.fields.author" :date="page.sys.createdAt" />
+      <author
+        :author="page.fields.author.fields.name"
+        :image="page.fields.author.fields.image.fields.file.url"
+        :date="page.sys.createdAt"
+      />
     </header>
     <article-content>
       <div v-html="markedBody"></div>
-      <div ref="comments"></div>
+      <!-- <div ref="comments"></div> -->
     </article-content>
+
+    <!-- <comments-list :slug="page.fields.slug" /> -->
+    <comments-form :slug="page.fields.slug" />
+
     <related-articles :articles="related" />
   </div>
 </template>
@@ -61,14 +69,14 @@ export default {
     },
   },
   mounted() {
-    const script = document.createElement('script')
-    script.src = 'https://utteranc.es/client.js'
-    script.setAttribute('repo', 'hendriksenremco/vuescratch-comments')
-    script.setAttribute('issue-term', 'pathname')
-    script.setAttribute('theme', 'github-light')
-    script.setAttribute('crossorigin', 'anonymous')
-    script.setAttribute('async', true)
-    this.$refs.comments.appendChild(script)
+    // const script = document.createElement('script')
+    // script.src = 'https://utteranc.es/client.js'
+    // script.setAttribute('repo', 'hendriksenremco/vuescratch-comments')
+    // script.setAttribute('issue-term', 'pathname')
+    // script.setAttribute('theme', 'github-light')
+    // script.setAttribute('crossorigin', 'anonymous')
+    // script.setAttribute('async', true)
+    // this.$refs.comments.appendChild(script)
   },
   head() {
     return {
@@ -183,14 +191,18 @@ export default {
     @media (max-width: #{$breakpoint-tablet}) {
       padding: $spacing * 4;
     }
+
+    .author {
+      margin: $spacing * 4 0;
+    }
+  }
+
+  .comments-form {
+    margin-top: $spacing * 2;
   }
 
   .article-breadcrumbs {
     margin-bottom: $spacing;
-  }
-
-  .author {
-    margin: $spacing * 4 0;
   }
 
   .nuxt-content-highlight {

@@ -34,11 +34,7 @@ export default {
   }
 
   a {
-    color: $blue;
-
-    @media (prefers-color-scheme: dark) {
-      color: saturate(lighten($blue, 25%), 20%);
-    }
+    color: var(--link-color);
   }
 }
 </style>

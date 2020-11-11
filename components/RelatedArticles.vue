@@ -35,10 +35,10 @@ export default {
   }
 
   &__title {
-    color: var(--heading-color);
+    color: var(--section-bg);
     margin-top: $spacing * 2;
-    font-size: 2rem;
-    text-align: right;
+    font-size: 3rem;
+    text-align: left;
   }
 }
 </style>

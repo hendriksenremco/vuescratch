@@ -1,14 +1,15 @@
 <template>
   <div v-if="author" class="author">
     <div
+      v-if="image"
       class="author__image"
       :style="{
-        backgroundImage: 'url(' + author.fields.image.fields.file.url + ')',
+        backgroundImage: 'url(' + image + ')',
       }"
     ></div>
     <div class="author__name">
       <div class="author__name__prefix">Author</div>
-      <div href="#" class="author__name__link">{{ author.fields.name }}</div>
+      <div href="#" class="author__name__link">{{ author }}</div>
     </div>
     <div class="author__date">
       <div class="author__date__prefix">Published</div>
@@ -23,8 +24,12 @@ export default {
       type: String,
       default: '',
     },
+    image: {
+      type: String,
+      default: null,
+    },
     author: {
-      type: Object,
+      type: String,
       default: null,
     },
   },

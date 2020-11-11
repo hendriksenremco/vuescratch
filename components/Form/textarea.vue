@@ -45,6 +45,7 @@ export default {
     font-family: $font-base;
     padding: $spacing * 2;
     margin: 0;
+    width: 100%;
 
     &:active {
       outline: 0;

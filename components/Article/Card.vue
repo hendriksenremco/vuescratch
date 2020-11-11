@@ -48,9 +48,10 @@ export default {
     flex: 1;
   }
 
+  &:focus,
   &:active,
   &:hover {
-    box-shadow: 0 0 10px 0 rgba($black, 0.2);
+    // box-shadow: 0 0 10px 0 rgba($black, 0.2);
     transform: scale(1.05);
   }
 }

@@ -4,8 +4,9 @@
   --section-bg: #{$white};
   --section-bg-alt: #{$grey-lightest};
   --section-fg: #{$black};
-  --heading-color: #{$white};
+  --heading-color: #{$black};
   --accent: #{$accent};
+  --link-color: #{$blue};
 
   @media (prefers-color-scheme: dark) {
     --accent: #{$accent-muted};
@@ -14,7 +15,8 @@
     --section-bg: #{$grey-darker};
     --section-bg-alt: #{$grey-dark};
     --section-fg: #{$grey-lighter};
-    --heading-color: #{$grey-lighter};
+    --heading-color: #{$white};
+    --link-color: #{saturate(lighten($blue, 25%), 20%)};
   }
 }
 
