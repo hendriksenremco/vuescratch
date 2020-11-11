@@ -31,4 +31,7 @@ exports.handler = function (event) {
         },
       })
     )
+    .then((entry) => {
+      entry.publish()
+    })
 }
