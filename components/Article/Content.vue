@@ -21,15 +21,10 @@ export default {
 </script>
 <style lang="scss">
 .article-content {
-  background-color: $white;
-  color: $black;
+  background-color: var(--section-bg);
+  color: var(--section-fg);
   border-radius: $spacing * 2;
   padding: $spacing * 8;
-
-  @media (prefers-color-scheme: dark) {
-    background-color: $grey-darker;
-    color: $grey-lighter;
-  }
 
   @media (max-width: #{$breakpoint-tablet}) {
     padding: $spacing * 4;

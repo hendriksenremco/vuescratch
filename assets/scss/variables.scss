@@ -1,12 +1,15 @@
 $black: #171717;
 $white: #fff;
 $accent: #99df3f;
+$accent-muted: desaturate($accent, 20%);
 $blue: #3f46df;
-$grey-darker: #272727;
-$grey-dark: #474757;
-$grey: #7a7a8c;
-$grey-light: #9a9a9c;
-$grey-lighter: #bababc;
+$grey-darker: #273727;
+$grey-darker: #272827;
+$grey-dark: #474947;
+$grey: #7a7d7a;
+$grey-light: #9a9c9a;
+$grey-lighter: #babcba;
+$grey-lightest: #d3d6d3;
 $red: #df3f3f;
 $cyan: #3fc2df;
 

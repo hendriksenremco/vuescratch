@@ -51,11 +51,11 @@ export default {
   overflow: hidden;
 
   h1 a {
-    color: $white;
+    color: var(--body-fg);
     text-decoration: none;
 
     &:hover {
-      color: $accent;
+      color: var(--accent);
     }
   }
 

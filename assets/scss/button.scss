@@ -2,16 +2,15 @@ button,
 .button {
   align-items: center;
   justify-content: center;
-  background-color: $accent;
+  background-color: var(--accent);
   border-radius: $spacing;
   border: 0;
-  color: $black;
+  color: var(--body-bg);
   cursor: pointer;
   display: flex;
   font-size: 1.1rem;
   font-weight: 700;
   font-family: $font-heading;
-  max-width: 320px;
   padding: $spacing * 2 $spacing * 3;
   appearance: none;
 

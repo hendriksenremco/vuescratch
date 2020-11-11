@@ -88,7 +88,7 @@ export default {
   &__link {
     border-left: 1px solid $grey-darker;
     border-right: 1px solid $grey-darker;
-    color: $white;
+    color: var(--body-fg);
     font-size: 1rem;
     font-family: $font-heading;
     font-weight: 400;
@@ -108,7 +108,7 @@ export default {
     }
 
     &:hover {
-      color: $accent;
+      color: var(--accent);
     }
   }
 

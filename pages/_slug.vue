@@ -10,18 +10,7 @@
       <div v-html="markedBody"></div>
       <div ref="comments"></div>
     </article-content>
-    <div class="article-page__related">
-      <h2 class="article-page__related__title">More to read</h2>
-      <div class="article-page__related__items">
-        <article-card
-          v-for="article in related"
-          :key="article.fields.slug"
-          :title="article.fields.title"
-          :slug="article.fields.slug"
-          :description="article.fields.description"
-        />
-      </div>
-    </div>
+    <related-articles :articles="related" />
   </div>
 </template>
 <script>
@@ -193,29 +182,6 @@ export default {
 
     @media (max-width: #{$breakpoint-tablet}) {
       padding: $spacing * 4;
-    }
-  }
-
-  &__related {
-    padding: $spacing * 2 0;
-
-    @media (max-width: #{$breakpoint-tablet}) {
-      padding: $spacing * 4;
-    }
-
-    &__title {
-      color: $grey-darker;
-      margin-top: $spacing * 2;
-      font-size: 2.5rem;
-    }
-
-    &__items {
-      display: grid;
-      grid-gap: $spacing * 4;
-      grid-template-columns: 1fr 1fr;
-      @media (max-width: #{$breakpoint-mobile}) {
-        grid-template-columns: 1fr;
-      }
     }
   }
 

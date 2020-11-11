@@ -29,15 +29,18 @@ export default {
   flex-direction: column;
 
   &__label {
+    color: var(--heading-color);
     font-family: $font-heading;
     font-weight: 700;
     padding: $spacing 0;
   }
 
   &__input {
-    border: 1px solid $grey-lighter;
+    -webkit-appearance: none;
+    background-color: var(--section-bg);
+    border: 1px solid var(--body-bg);
     border-radius: $spacing;
-    box-shadow: none;
+    color: var(--section-fg);
     font-size: 1rem;
     font-family: $font-base;
     padding: $spacing * 2;

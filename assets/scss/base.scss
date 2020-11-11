@@ -1,6 +1,24 @@
+:root {
+  --body-bg: #{$black};
+  --body-fg: #{$white};
+  --section-bg: #{$white};
+  --section-fg: #{$black};
+  --heading-color: #{$white};
+  --accent: #{$accent};
+
+  @media (prefers-color-scheme: dark) {
+    --accent: #{$accent-muted};
+    --body-bg: #{$black};
+    --body-fg: #{$grey-lightest};
+    --section-bg: #{$grey-darker};
+    --section-fg: #{$grey-lighter};
+    --heading-color: #{$grey-lighter};
+  }
+}
+
 html {
-  background-color: $black;
-  color: $white;
+  background-color: var(--body-bg);
+  color: var(--body-fg);
   box-sizing: border-box;
   overflow-x: hidden;
 }
@@ -17,8 +35,8 @@ body {
   margin: 0;
 }
 
-:focus {
-  box-shadow: 0 0 0 2px rgba($grey, 0.5);
+:focus-visible {
+  box-shadow: 0 0 0 4px rgba($accent, 0.5);
   outline: rgba(0, 0, 0, 0);
   text-decoration-color: $accent;
 }

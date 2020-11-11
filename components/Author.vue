@@ -8,7 +8,7 @@
     ></div>
     <div class="author__name">
       <div class="author__name__prefix">Author</div>
-      <a href="#" class="author__name__link">{{ author.fields.name }}</a>
+      <div href="#" class="author__name__link">{{ author.fields.name }}</div>
     </div>
     <div class="author__date">
       <div class="author__date__prefix">Published</div>
@@ -50,7 +50,7 @@ export default {
 
   &__date,
   &__name {
-    color: $white;
+    color: var(--body-fg);
 
     &__prefix {
       color: $grey;
@@ -58,7 +58,7 @@ export default {
     }
 
     &__link {
-      color: $white;
+      color: var(--body-fg);
       text-decoration: none;
     }
   }
