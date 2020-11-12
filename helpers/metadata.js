@@ -166,12 +166,15 @@ export function articleSchemaOrg({ page, comments }) {
       dateModified: page.sys.updatedAt,
       image: 'https:' + page.fields.heroImage.fields.file.url,
       image: {
-          '@type': 'ImageObject',
-          '@id': 'https://vuescratch.com/#primaryimage',
-          inLanguage: 'en-US',
-          url: 'https:' + page.fields.heroImage.fields.file.url ?'w=1200&h=630&fm=jpg',
-          width: 1200,
-          height: 630
+        '@type': 'ImageObject',
+        '@id': 'https://vuescratch.com/#primaryimage',
+        inLanguage: 'en-US',
+        url:
+          'https:' +
+          page.fields.heroImage.fields.file.url +
+          '?w=1200&h=630&fm=jpg',
+        width: 1200,
+        height: 630,
       },
       description: page.fields.description,
       url: `https://vuescratch.com/${page.fields.slug}/`,
@@ -200,8 +203,8 @@ export function articleSchemaOrg({ page, comments }) {
           '@type': 'CommentAction',
           name: 'Comment',
           target: {
-           '@type': 'EntryPoint',
-            urlTemplate:'https://vuescratch.com/${page.fields.slug}/#comment'
+            '@type': 'EntryPoint',
+            urlTemplate: 'https://vuescratch.com/${page.fields.slug}/#comment',
           },
         },
       ],
