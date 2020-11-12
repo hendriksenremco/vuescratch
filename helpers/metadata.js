@@ -164,7 +164,6 @@ export function articleSchemaOrg({ page, comments }) {
       },
       datePublished: page.sys.createdAt,
       dateModified: page.sys.updatedAt,
-      image: 'https:' + page.fields.heroImage.fields.file.url,
       image: {
         '@type': 'ImageObject',
         '@id': 'https://vuescratch.com/#primaryimage',
