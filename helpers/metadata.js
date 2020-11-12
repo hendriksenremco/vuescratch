@@ -203,7 +203,7 @@ export function articleSchemaOrg({ page, comments }) {
           name: 'Comment',
           target: {
             '@type': 'EntryPoint',
-            urlTemplate: 'https://vuescratch.com/${page.fields.slug}/#comment',
+            urlTemplate: `https://vuescratch.com/${page.fields.slug}/#comment`,
           },
         },
       ],
