@@ -36,6 +36,7 @@ export default {
   text-decoration: none;
   position: relative;
   transition: transform 150ms ease, box-shadow 150ms ease;
+  width: 100%;
 
   @media (max-width: #{$breakpoint-mobile}) {
     padding: $spacing * 3;

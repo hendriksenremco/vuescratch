@@ -9,6 +9,9 @@
         :image="page.fields.author.fields.image.fields.file.url"
         :date="page.sys.createdAt"
       />
+      <tag v-for="tag in page.fields.tags" :key="tag" :tag="tag">
+        {{ tag }}
+      </tag>
     </header>
     <article-content>
       <div v-html="markedBody"></div>
