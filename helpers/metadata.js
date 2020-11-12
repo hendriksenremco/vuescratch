@@ -81,7 +81,20 @@ export function articleMeta({ page }) {
     {
       hid: 'og:image',
       property: 'og:image',
-      content: 'https:' + page.fields.heroImage.fields.file.url,
+      content:
+        'https:' +
+        page.fields.heroImage.fields.file.url +
+        '?w=1200&h=630&fm=jpg',
+    },
+    {
+      hid: 'og:image:width',
+      property: 'og:image:width',
+      content: 1200,
+    },
+    {
+      hid: 'og:image:height',
+      property: 'og:image:height',
+      content: 630,
     },
     {
       hid: 'og:url',
@@ -116,7 +129,20 @@ export function articleMeta({ page }) {
     {
       hid: 'twitter:image',
       property: 'twitter:image',
-      content: 'https:' + page.fields.heroImage.fields.file.url,
+      content:
+        'https:' +
+        page.fields.heroImage.fields.file.url +
+        '?w=1200&h=600&fm=jpg',
+    },
+    {
+      hid: 'twitter:image:width',
+      property: 'twitter:image:width',
+      content: 1200,
+    },
+    {
+      hid: 'twitter:image:height',
+      property: 'twitter:image:height',
+      content: 600,
     },
   ]
 }
@@ -127,7 +153,7 @@ export function articleSchemaOrg({ page, comments }) {
       '@type': 'Comment',
       dateCreated: comment.sys.createdAt,
       description: comment.fields.message,
-      aurthor: {
+      author: {
         '@type': 'Person',
         name: comment.fields.name,
       },

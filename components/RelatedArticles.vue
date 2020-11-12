@@ -23,7 +23,7 @@ export default {
   padding: $spacing * 2 0;
 
   @media (max-width: #{$breakpoint-tablet}) {
-    padding: $spacing * 4;
+    padding: $spacing * 3;
   }
   &__items {
     display: grid;

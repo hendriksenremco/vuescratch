@@ -1,7 +1,7 @@
 <template>
   <div
     class="article-background"
-    :style="{ backgroundImage: 'url(' + image + ')' }"
+    :style="{ backgroundImage: 'url(' + image + '?fm=webp)' }"
   ></div>
 </template>
 <script>
