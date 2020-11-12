@@ -182,6 +182,9 @@ export function articleSchemaOrg({ page, comments }) {
       url: `https://vuescratch.com/${page.fields.slug}/`,
       comment: commentsData,
       commentCount: commentsData.length,
+      mainEntityOfPage: {
+        '@id': `https://vuescratch.com/${page.fields.slug}/#article`,
+      },
     },
   }
 }
