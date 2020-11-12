@@ -200,7 +200,6 @@ export function articleSchemaOrg({ page, comments }) {
       mainEntityOfPage: {
         '@type': 'Website',
         '@id': `https://vuescratch.com/${page.fields.slug}/#article`,
-        '@url': `https://vuescratch.com/${page.fields.slug}/`,
         name: page.fields.title,
         datePublished: page.sys.createdAt,
         dateModified: page.sys.updatedAt,
