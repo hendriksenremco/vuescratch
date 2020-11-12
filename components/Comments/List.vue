@@ -22,7 +22,7 @@
 export default {
   props: {
     items: {
-      type: Object,
+      type: [Array, Object],
       default: null,
     },
   },
