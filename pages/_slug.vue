@@ -14,7 +14,7 @@
       <div v-html="markedBody"></div>
     </article-content>
 
-    <comments-list :items="comments" />
+    <comments-list id="comment" :items="comments" />
     <comments-form :slug="page.fields.slug" />
 
     <related-articles :articles="related" />

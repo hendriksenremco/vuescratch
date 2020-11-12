@@ -3,52 +3,39 @@ export function homeSchemaOrg() {
     hid: 'schema.org',
     type: 'application/ld+json',
     json: {
-      hid: 'schema.org',
-      type: 'application/ld+json',
-      json: {
-        '@context': 'https://schema.org',
-        '@type': 'CollectionPage',
-        '@id': 'https://vuescratch.com#webpage',
-        url: 'https://vuescratch.com',
+      '@context': 'https://schema.org',
+      '@type': 'WebSite',
+      '@id': 'https://vuescratch.com#webpage',
+      url: 'https://vuescratch.com',
+      name: 'VueScratch',
+      description:
+        'Developing Vue applications from scratch with Vue.js, NuxtJS and SCSS.',
+      inLanguage: 'en-US',
+      about: {
+        '@type': 'Organization',
+        '@id': 'https://vuescratch.com#organization',
         name: 'VueScratch',
-        description:
-          'Developing Vue applications from scratch with Vue.js, NuxtJS and SCSS.',
-        inLanguage: 'en-US',
-        isPartOf: {
-          '@type': 'Website',
-          '@id': 'https://vuescratch.com/#website',
-          url: 'https://vuescratch.com',
-          name: 'VueScratch',
-          description:
-            'Developing Vue applications from scratch with Vue.js, NuxtJS and SCSS.',
+        url: 'https://vuescratch.com',
+        sameAs: 'https://twitter.com/vuescratch',
+        logo: {
+          '@type': 'ImageObject',
+          '@id': 'https://vuescratch.com/#logo',
           inLanguage: 'en-US',
+          url: 'https://vuescratch.com/icon.png',
+          caption: 'VueScratch',
         },
-        about: {
-          '@type': 'Organization',
-          '@id': 'https://vuescratch.com#organization',
-          name: 'VueScratch',
-          url: 'https://vuescratch.com',
-          sameAs: 'https://twitter.com/vuescratch',
-          logo: {
-            '@type': 'ImageObject',
-            '@id': 'https://vuescratch.com/#logo',
-            inLanguage: 'en-US',
-            url: 'https://vuescratch.com/icon.png',
-            caption: 'VueScratch',
-          },
-          image: {
-            '@type': 'ImageObject',
-            '@id': 'https://vuescratch.com/#logo',
-            inLanguage: 'en-US',
-            url: 'https://vuescratch.com/icon.png',
-            caption: 'VueScratch',
-          },
-          potentialAction: {
-            '@type': 'ReadAction',
-            target: {
-              '@type': 'EntryPoint',
-              urlTemplate: 'https://vuescratch.com/',
-            },
+        image: {
+          '@type': 'ImageObject',
+          '@id': 'https://vuescratch.com/#logo',
+          inLanguage: 'en-US',
+          url: 'https://vuescratch.com/icon.png',
+          caption: 'VueScratch',
+        },
+        potentialAction: {
+          '@type': 'ReadAction',
+          target: {
+            '@type': 'EntryPoint',
+            urlTemplate: 'https://vuescratch.com/',
           },
         },
       },
@@ -178,13 +165,46 @@ export function articleSchemaOrg({ page, comments }) {
       datePublished: page.sys.createdAt,
       dateModified: page.sys.updatedAt,
       image: 'https:' + page.fields.heroImage.fields.file.url,
+      image: {
+          '@type': 'ImageObject',
+          '@id': 'https://vuescratch.com/#primaryimage',
+          inLanguage: 'en-US',
+          url: 'https:' + page.fields.heroImage.fields.file.url ?'w=1200&h=630&fm=jpg',
+          width: 1200,
+          height: 630
+      },
       description: page.fields.description,
       url: `https://vuescratch.com/${page.fields.slug}/`,
       comment: commentsData,
       commentCount: commentsData.length,
       mainEntityOfPage: {
         '@id': `https://vuescratch.com/${page.fields.slug}/#article`,
+        '@url': `https://vuescratch.com/${page.fields.slug}/`,
+        name: page.fields.title,
+        datePublished: page.sys.createdAt,
+        dateModified: page.sys.updatedAt,
+        description: page.fields.description,
+        inLanguage: 'en-US',
+        isPartOf: {
+          '@type': 'Website',
+          '@id': 'https://vuescratch.com/#website',
+          url: 'https://vuescratch.com',
+          name: 'VueScratch',
+          description:
+            'Developing Vue applications from scratch with Vue.js, NuxtJS and SCSS.',
+          inLanguage: 'en-US',
+        },
       },
+      potentialAction: [
+        {
+          '@type': 'CommentAction',
+          name: 'Comment',
+          target: {
+           '@type': 'EntryPoint',
+            urlTemplate:'https://vuescratch.com/${page.fields.slug}/#comment'
+          },
+        },
+      ],
     },
   }
 }
