@@ -180,6 +180,7 @@ export function articleSchemaOrg({ page, comments }) {
       comment: commentsData,
       commentCount: commentsData.length,
       mainEntityOfPage: {
+        '@type': 'Website',
         '@id': `https://vuescratch.com/${page.fields.slug}/#article`,
         '@url': `https://vuescratch.com/${page.fields.slug}/`,
         name: page.fields.title,
