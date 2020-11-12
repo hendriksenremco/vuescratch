@@ -180,7 +180,8 @@ export function articleSchemaOrg({ page, comments }) {
       image: 'https:' + page.fields.heroImage.fields.file.url,
       description: page.fields.description,
       url: `https://vuescratch.com/${page.fields.slug}/`,
-      comments: commentsData,
+      comment: commentsData,
+      commentCount: commentsData.length,
     },
   }
 }
