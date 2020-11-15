@@ -1,5 +1,6 @@
 <template>
   <form class="contact-form" method="POST" @submit.prevent="onSubmit">
+    <h2>Contact me</h2>
     <form-input
       v-if="!success"
       v-model="beer"
@@ -72,7 +73,14 @@ export default {
   max-width: $breakpoint-mobile;
   display: grid;
   grid-gap: $spacing * 2;
-  padding: $spacing * 3;
+  padding: $spacing * 4;
+
+  @media (max-width: #{$breakpoint-tablet}) {
+    padding: $spacing * 4;
+  }
+  @media (max-width: #{$breakpoint-mobile}) {
+    padding: $spacing * 3;
+  }
 
   &__beer {
     position: absolute;
