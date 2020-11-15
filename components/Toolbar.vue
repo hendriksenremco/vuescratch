@@ -28,7 +28,7 @@ export default {
   // },
 }
 </script>
-<style lang="scss">
+<style lang="scss" scoped>
 .toolbar {
   background-color: $black;
   border-bottom: 1px solid $grey-darker;

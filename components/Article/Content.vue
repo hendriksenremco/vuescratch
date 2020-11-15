@@ -7,6 +7,11 @@
 import Prism from 'prismjs'
 import 'prismjs/components/prism-scss'
 import 'prismjs/components/prism-javascript'
+import 'prismjs/plugins/line-numbers/prism-line-numbers'
+import 'prismjs/plugins/line-numbers/prism-line-numbers.css'
+import 'prismjs/plugins/toolbar/prism-toolbar'
+import 'prismjs/plugins/toolbar/prism-toolbar.css'
+import 'prismjs/plugins/copy-to-clipboard/prism-copy-to-clipboard'
 export default {
   mounted() {
     Prism.highlightAll()

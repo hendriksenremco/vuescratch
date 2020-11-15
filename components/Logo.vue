@@ -42,6 +42,12 @@
   &__white {
     fill: var(--body-fg);
   }
+
+  &:hover {
+    .logo__white {
+      fill: var(--accent);
+    }
+  }
 }
 
 @keyframes appear {

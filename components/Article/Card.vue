@@ -22,6 +22,10 @@ export default {
       type: String,
       default: '',
     },
+    image: {
+      type: String,
+      default: '',
+    },
   },
 }
 </script>
