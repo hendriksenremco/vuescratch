@@ -13,9 +13,9 @@ export default {
 </script>
 <style lang="scss" scoped>
 .tag {
-  background-color: var(--section-bg-alt);
+  background-color: $grey-darkest;
   border-radius: $border-radius * 4;
-  color: var(--section-fg);
+  color: $grey;
   font-size: 0.8rem;
   font-family: $font-heading;
   font-weight: 700;
@@ -23,6 +23,9 @@ export default {
   display: inline-flex;
   text-decoration: none;
 
+  &:hover {
+    color: $white;
+  }
   & ~ .tag {
     margin-left: $spacing;
   }

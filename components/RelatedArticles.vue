@@ -35,7 +35,7 @@ export default {
   }
 
   &__title {
-    color: var(--section-bg);
+    color: $grey-darker;
     margin-top: $spacing * 2;
     font-size: 3rem;
     text-align: left;

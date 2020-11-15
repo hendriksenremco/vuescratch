@@ -27,9 +27,9 @@ export default {
 </script>
 <style lang="scss">
 .article-card {
-  background-color: var(--section-bg);
+  background-color: $grey-darker;
   border-radius: $border-radius * 2;
-  color: var(--section-fg);
+  color: $grey-lighter;
   display: flex;
   flex-direction: column;
   padding: $spacing * 4;
@@ -48,7 +48,7 @@ export default {
   }
 
   p {
-    color: var(--section-fg);
+    color: $grey-light;
     font-size: 0.9rem;
     flex: 1;
   }

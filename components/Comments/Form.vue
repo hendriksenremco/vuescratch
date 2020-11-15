@@ -28,7 +28,7 @@
       label="Your comment"
       class="comments-form__comment"
     />
-    <button v-if="!success" type="submit">Submit</button>
+    <button v-if="!success" class="button--accent" type="submit">Submit</button>
     <div v-if="success" class="comments-form__success">
       <h3>Thanks for contributing!</h3>
       <div>Your comment will soon be shown here.</div>
@@ -37,9 +37,9 @@
 </template>
 <style lang="scss">
 .comments-form {
-  background-color: var(--section-bg);
+  background-color: $grey-darker;
   border-radius: $border-radius * 2;
-  color: var(--section-fg);
+  color: $grey-lighter;
   display: grid;
   grid-template-columns: 1fr 1fr;
   grid-gap: $spacing * 2;

@@ -2,10 +2,10 @@ button,
 .button {
   align-items: center;
   justify-content: center;
-  background-color: var(--accent);
-  border-radius: $border-radius;
+  background-color: $grey-dark;
+  color: $white;
+  border-radius: $border-radius * 6;
   border: 0;
-  color: var(--body-bg);
   cursor: pointer;
   display: flex;
   font-size: 1.1rem;
@@ -15,7 +15,16 @@ button,
   appearance: none;
 
   &:hover {
-    background-color: darken($accent, 10%);
+    background-color: lighten($grey-dark, 10%);
+  }
+
+  &--accent {
+    background-color: var(--accent);
+    color: var(--body-bg);
+
+    &:hover {
+      background-color: darken($accent-muted, 10%);
+    }
   }
 
   &--icon {

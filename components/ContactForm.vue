@@ -27,7 +27,7 @@
       label="Your message"
       class="contact-form__comment"
     />
-    <button v-if="!success" type="submit">Submit</button>
+    <button v-if="!success" class="button--accent" type="submit">Submit</button>
     <div v-if="success">
       <h1>Thanks! I will contact you soon.</h1>
     </div>
@@ -72,7 +72,7 @@ export default {
   max-width: $breakpoint-mobile;
   display: grid;
   grid-gap: $spacing * 2;
-  padding: $spacing * 4;
+  padding: $spacing * 3;
 
   &__beer {
     position: absolute;
