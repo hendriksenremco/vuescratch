@@ -15,7 +15,12 @@
 </template>
 <script>
 export default {
-  props: ['articles'],
+  props: {
+    articles: {
+      type: [Object, Array],
+      default: null,
+    },
+  },
 }
 </script>
 <style lang="scss">
