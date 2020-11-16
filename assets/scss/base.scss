@@ -16,7 +16,7 @@
     --section-bg-alt: #{$grey-dark};
     --section-fg: #{$grey-lighter};
     --heading-color: #{$white};
-    --link-color: #{saturate(lighten($blue, 25%), 20%)};
+    --link-color: #{$blue-muted};
   }
 }
 

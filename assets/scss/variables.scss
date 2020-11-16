@@ -3,6 +3,7 @@ $white: #fff;
 $accent: #99df3f;
 $accent-muted: desaturate($accent, 20%);
 $blue: #3f46df;
+$blue-muted: saturate(lighten($blue, 25%), 20%);
 $grey-darkest: #212125;
 $grey-darker: #272729;
 $grey-dark: #373739;
