@@ -1,6 +1,6 @@
 <template>
   <div class="home-page container">
-    <article-summary
+    <lazy-article-summary
       v-for="article in articles.items"
       :key="article.fields.slug"
       :date="article.sys.createdAt"
@@ -10,7 +10,7 @@
       :title="article.fields.title"
     >
       {{ article.fields.description }}
-    </article-summary>
+    </lazy-article-summary>
     <intersection-observer @intersect="loadMore" />
   </div>
 </template>

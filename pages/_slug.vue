@@ -1,17 +1,17 @@
 <template>
   <div class="article-page">
     <header class="article-page__header">
-      <article-breadcrumbs />
+      <lazy-article-breadcrumbs />
       <h1>{{ page.fields.title }}</h1>
-      <article-background :image="page.fields.heroImage.fields.file.url" />
-      <author
+      <lazy-article-background :image="page.fields.heroImage.fields.file.url" />
+      <lazy-author
         :author="page.fields.author.fields.name"
         :image="page.fields.author.fields.image.fields.file.url"
         :date="page.sys.createdAt"
       />
-      <tag v-for="tag in page.fields.tags" :key="tag" :tag="tag">
+      <lazy-tag v-for="tag in page.fields.tags" :key="tag" :tag="tag">
         {{ tag }}
-      </tag>
+      </lazy-tag>
     </header>
     <article-content>
       <div v-html="markedBody"></div>
@@ -20,10 +20,10 @@
       </p>
     </article-content>
 
-    <comments-list id="comment" :items="comments" />
-    <comments-form :slug="page.fields.slug" />
+    <lazy-comments-list id="comment" :items="comments" />
+    <lazy-comments-form :slug="page.fields.slug" />
 
-    <related-articles :articles="related" />
+    <lazy-related-articles :articles="related" />
   </div>
 </template>
 <script>

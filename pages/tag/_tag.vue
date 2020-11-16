@@ -7,7 +7,7 @@
       }}'
     </h1>
     <div class="results">
-      <article-card
+      <alazy-rticle-card
         v-for="result in results.items"
         :key="result.fields.slug"
         :title="result.fields.title"

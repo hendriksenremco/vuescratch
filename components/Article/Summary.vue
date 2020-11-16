@@ -5,8 +5,8 @@
         title
       }}</nuxt-link>
     </h1>
-    <article-background :image="image" />
-    <author
+    <lazy-article-background :image="image" />
+    <lazy-author
       :author="author.fields.name"
       :image="author.fields.image.fields.file.url"
       :date="date"
@@ -18,13 +18,7 @@
   </article>
 </template>
 <script>
-import Author from '~/components/Author'
-import ArticleBackground from '~/components/Article/Background'
 export default {
-  components: {
-    Author,
-    ArticleBackground,
-  },
   props: {
     author: {
       type: Object,
