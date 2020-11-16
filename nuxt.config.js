@@ -30,7 +30,7 @@ const createPreviewRoutes = async () => {
 export default {
   // Target (https://go.nuxtjs.dev/config-target)
   target: 'static',
-  modern: true,
+  modern: 'client',
   server: {
     host: '0.0.0.0',
   },
@@ -120,12 +120,11 @@ export default {
     ],
     script: [
       homeSchemaOrg(),
-      // {
-      //   hid: 'adsense',
-      //   'data-ad-client': 'ca-pub-4674696175162885',
-      //   src: 'https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js',
-      //   async: true,
-      // },
+      {
+        'data-ad-client': 'ca-pub-4674696175162885',
+        src: 'https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js',
+        async: true,
+      },
     ],
   },
 
