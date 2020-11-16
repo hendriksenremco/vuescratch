@@ -120,11 +120,11 @@ export default {
     ],
     script: [
       homeSchemaOrg(),
-      {
-        'data-ad-client': 'ca-pub-4674696175162885',
-        src: 'https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js',
-        defer: true,
-      },
+      // {
+      //   'data-ad-client': 'ca-pub-4674696175162885',
+      //   src: 'https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js',
+      //   defer: true,
+      // },
     ],
   },
 
@@ -168,7 +168,7 @@ export default {
     '@nuxtjs/style-resources',
     '@nuxtjs/sitemap',
     'nuxt-rfg-icon',
-    '@nuxtjs/google-gtag',
+    // '@nuxtjs/google-gtag',
     '@nuxtjs/feed',
     'nuxt-webfontloader',
     // '@nuxtjs/amp',
