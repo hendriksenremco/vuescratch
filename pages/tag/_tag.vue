@@ -7,7 +7,7 @@
       }}'
     </h1>
     <div class="results">
-      <alazy-rticle-card
+      <lazy-article-card
         v-for="result in results.items"
         :key="result.fields.slug"
         :title="result.fields.title"
@@ -24,9 +24,11 @@ export default {
   async asyncData({ params, error }) {
     const results = await client.getEntries({
       content_type: 'blogPost',
-      'fields.tags[in]': params.tag,
+      'fields.tags[in]': decodeURIComponent(params.tag),
       order: '-sys.createdAt',
     })
+
+    console.log(decodeURIComponent(params.tag))
 
     return { results }
   },
