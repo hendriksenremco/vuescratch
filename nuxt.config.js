@@ -102,15 +102,20 @@ export default {
         title: 'RSS 2.0',
         href: 'https://vuescratch.com/feed.rss',
       },
-      // {
-      //   rel: 'stylesheet',
-      //   href:
-      //     'https://fonts.googleapis.com/css2?family=Merriweather:wght@400;700&family=Raleway:wght@400;800&display=swap',
-      // },
       {
         hid: 'canonical',
         rel: 'canonical',
         href: `https://vuescratch.com/`,
+      },
+      {
+        rel: 'preconnect',
+        href: 'https://pagead2.googlesyndication.com',
+        crossorigin: true,
+      },
+      {
+        rel: 'preconnect',
+        href: 'https://tpc.googlesyndication.com',
+        crossorigin: true,
       },
     ],
     script: [
