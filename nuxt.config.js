@@ -102,11 +102,11 @@ export default {
         title: 'RSS 2.0',
         href: 'https://vuescratch.com/feed.rss',
       },
-      {
-        rel: 'stylesheet',
-        href:
-          'https://fonts.googleapis.com/css2?family=Merriweather:wght@400;700&family=Raleway:wght@400;800&display=swap',
-      },
+      // {
+      //   rel: 'stylesheet',
+      //   href:
+      //     'https://fonts.googleapis.com/css2?family=Merriweather:wght@400;700&family=Raleway:wght@400;800&display=swap',
+      // },
       {
         hid: 'canonical',
         rel: 'canonical',
@@ -122,6 +122,12 @@ export default {
         async: true,
       },
     ],
+  },
+
+  webfontloader: {
+    google: {
+      families: ['Merriweather:400,700', 'Raleway:400,800'],
+    },
   },
 
   // Global CSS (https://go.nuxtjs.dev/config-css)
@@ -154,6 +160,7 @@ export default {
     'nuxt-rfg-icon',
     '@nuxtjs/google-gtag',
     '@nuxtjs/feed',
+    'nuxt-webfontloader',
     // '@nuxtjs/amp',
   ],
 

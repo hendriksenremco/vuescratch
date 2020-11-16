@@ -21,6 +21,7 @@
     "core-js": "^3.6.5",
     "marked": "^1.2.3",
     "nuxt": "^2.14.6",
+    "nuxt-webfontloader": "^1.1.0",
     "prismjs": "^1.22.0"
   },
   "devDependencies": {
