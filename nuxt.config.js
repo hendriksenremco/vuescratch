@@ -123,7 +123,7 @@ export default {
       {
         'data-ad-client': 'ca-pub-4674696175162885',
         src: 'https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js',
-        async: true,
+        defer: true,
       },
     ],
   },
