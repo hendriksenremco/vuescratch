@@ -4,7 +4,7 @@
       v-if="image"
       class="author__image"
       :style="{
-        backgroundImage: 'url(' + image + ')',
+        backgroundImage: 'url(' + image + '?w=48&h=48&fit=fill&fm=webp)',
       }"
     ></div>
     <div class="author__name">

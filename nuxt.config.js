@@ -125,8 +125,14 @@ export default {
   },
 
   webfontloader: {
-    google: {
-      families: ['Merriweather:400,700', 'Raleway:400,800'],
+    custom: {
+      families: ['Merriweathers:n4,n7', 'Raleway:n4,n8'],
+      urls: [
+        // for each Google Fonts add url + options you want
+        // here add font-display option
+        'https://fonts.googleapis.com/css?family=Merriweather:400,700&display=swap',
+        'https://fonts.googleapis.com/css?family=Raleway:400,800&display=swap',
+      ],
     },
   },
 
