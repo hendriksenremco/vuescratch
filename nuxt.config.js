@@ -30,7 +30,7 @@ const createPreviewRoutes = async () => {
 export default {
   // Target (https://go.nuxtjs.dev/config-target)
   target: 'static',
-
+  modern: true,
   server: {
     host: '0.0.0.0',
   },
