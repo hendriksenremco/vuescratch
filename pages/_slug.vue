@@ -15,6 +15,9 @@
     </header>
     <article-content>
       <div v-html="markedBody"></div>
+      <p>
+        Leave a comment below if you have got any questions about this article.
+      </p>
     </article-content>
 
     <comments-list id="comment" :items="comments" />

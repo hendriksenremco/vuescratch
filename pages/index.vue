@@ -11,7 +11,7 @@
     >
       {{ article.fields.description }}
     </article-summary>
-    <div ref="end"></div>
+    <intersection-observer @intersect="loadMore" />
   </div>
 </template>
 
@@ -37,20 +37,6 @@ export default {
     }
   },
 
-  mounted() {
-    const intersectionObserver = new IntersectionObserver(
-      (entries) => {
-        entries.forEach((entry) => {
-          if (entry.isIntersecting) {
-            this.loadMore()
-          }
-        })
-      },
-      { threshold: 1 }
-    )
-    intersectionObserver.observe(this.$refs.end)
-  },
-
   methods: {
     async loadMore() {
       if (this.end) return false
@@ -60,7 +46,6 @@ export default {
         skip: this.articles.items.length,
         limit: 3,
       })
-      console.log('Load moore')
       this.articles.items = [...this.articles.items, ...result.items]
       if (result.total <= this.articles.items.length) {
         this.end = true
