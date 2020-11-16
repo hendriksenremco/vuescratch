@@ -120,18 +120,18 @@ export default {
     ],
     script: [
       homeSchemaOrg(),
-      {
-        hid: 'adsense',
-        'data-ad-client': 'ca-pub-4674696175162885',
-        src: 'https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js',
-        async: true,
-      },
+      // {
+      //   hid: 'adsense',
+      //   'data-ad-client': 'ca-pub-4674696175162885',
+      //   src: 'https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js',
+      //   async: true,
+      // },
     ],
   },
 
   webfontloader: {
     custom: {
-      families: ['Merriweathers:n4,n7', 'Raleway:n4,n8'],
+      families: ['Merriweather:n4,n7', 'Raleway:n4,n8'],
       urls: [
         // for each Google Fonts add url + options you want
         // here add font-display option
