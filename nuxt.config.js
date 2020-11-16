@@ -168,7 +168,7 @@ export default {
     '@nuxtjs/style-resources',
     '@nuxtjs/sitemap',
     'nuxt-rfg-icon',
-    // '@nuxtjs/google-gtag',
+    '@nuxtjs/google-gtag',
     '@nuxtjs/feed',
     'nuxt-webfontloader',
     // '@nuxtjs/amp',

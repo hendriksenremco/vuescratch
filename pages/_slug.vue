@@ -30,10 +30,11 @@
 import marked from 'marked'
 import { articleSchemaOrg, articleMeta } from '~/helpers/metadata'
 import { createClient, createPreviewClient } from '~/plugins/contentful.js'
-const client = createClient()
 
 export default {
   async asyncData({ params, error }) {
+    const client = createClient()
+
     let pages = null
     pages = await client.getEntries({
       content_type: 'blogPost',
