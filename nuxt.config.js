@@ -30,7 +30,7 @@ const createPreviewRoutes = async () => {
 export default {
   // Target (https://go.nuxtjs.dev/config-target)
   target: 'static',
-  modern: 'client',
+  modern: process.env.NODE_ENV === 'production' ? 'client' : false,
   server: {
     host: '0.0.0.0',
   },
@@ -134,8 +134,9 @@ export default {
       urls: [
         // for each Google Fonts add url + options you want
         // here add font-display option
-        'https://fonts.googleapis.com/css?family=Merriweather:400,700&display=swap',
-        'https://fonts.googleapis.com/css?family=Raleway:400,800&display=swap',
+        'https://fonts.googleapis.com/css?family=Merriweather:400,700',
+        'https://fonts.googleapis.com/css?family=Raleway:800',
+        'https://fonts.googleapis.com/css2?family=Roboto+Slab&display=swap',
       ],
     },
   },

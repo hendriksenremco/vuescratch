@@ -41,5 +41,9 @@ export default {
   a {
     color: var(--link-color);
   }
+
+  p:last-child {
+    margin-bottom: 0;
+  }
 }
 </style>

@@ -111,6 +111,9 @@ export default {
     @media (max-width: #{$breakpoint-tablet}) {
       padding: $spacing * 4;
     }
+    @media (max-width: #{$breakpoint-mobile}) {
+      padding: $spacing * 3;
+    }
 
     .author {
       margin: $spacing * 4 0;

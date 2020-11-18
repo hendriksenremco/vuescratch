@@ -19,7 +19,7 @@ export default {
   background-size: cover;
   background-position: 50% 50%;
   background-repeat: no-repeat;
-  filter: grayscale(1);
+  filter: grayscale(0.5) hue-rotate(80deg);
   border-radius: 9999px;
   width: 100%;
   height: 100%;
@@ -27,7 +27,7 @@ export default {
   top: 0;
   bottom: 0;
   left: 0;
-  right: 0px;
+  right: 0;
   z-index: -1;
 
   &:after {

@@ -1,6 +1,6 @@
 <template>
   <form class="contact-form" method="POST" @submit.prevent="onSubmit">
-    <h2>Contact me</h2>
+    <h2 class="contact-form__title">Contact me</h2>
     <form-input
       v-if="!success"
       v-model="beer"
@@ -72,6 +72,7 @@ export default {
   border-radius: $border-radius * 2;
   max-width: $breakpoint-mobile;
   display: grid;
+  grid-template-columns: 1fr 1fr;
   grid-gap: $spacing * 2;
   padding: $spacing * 4;
 
@@ -86,6 +87,12 @@ export default {
     position: absolute;
     opacity: 0;
     z-index: -1;
+  }
+
+  &__success,
+  &__comment,
+  &__title {
+    grid-column: span 2;
   }
 }
 </style>

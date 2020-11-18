@@ -30,7 +30,7 @@ export default {
 </script>
 <style lang="scss" scoped>
 .toolbar {
-  background-color: $black;
+  background-color: rgba($black, 0.95);
   border-bottom: 1px solid $grey-darker;
   height: $spacing * 10;
   position: fixed;

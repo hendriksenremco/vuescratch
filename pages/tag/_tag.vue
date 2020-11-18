@@ -28,8 +28,6 @@ export default {
       order: '-sys.createdAt',
     })
 
-    console.log(decodeURIComponent(params.tag))
-
     return { results }
   },
 }
