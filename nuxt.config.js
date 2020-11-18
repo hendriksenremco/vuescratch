@@ -136,7 +136,6 @@ export default {
         // here add font-display option
         'https://fonts.googleapis.com/css?family=Merriweather:400,700',
         'https://fonts.googleapis.com/css?family=Raleway:800',
-        'https://fonts.googleapis.com/css2?family=Roboto+Slab&display=swap',
       ],
     },
   },
