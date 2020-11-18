@@ -135,7 +135,7 @@ export default {
         // for each Google Fonts add url + options you want
         // here add font-display option
         'https://fonts.googleapis.com/css?family=Merriweather:400,700',
-        'https://fonts.googleapis.com/css?family=Raleway:800',
+        'https://fonts.googleapis.com/css?family=Raleway:400,800',
       ],
     },
   },
