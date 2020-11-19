@@ -52,6 +52,7 @@
   }
   @media (max-width: #{$breakpoint-mobile}) {
     padding: $spacing * 3;
+    grid-template-columns: 1fr;
   }
 
   &__beer {
@@ -64,6 +65,10 @@
   &__comment,
   &__title {
     grid-column: span 2;
+
+    @media (max-width: #{$breakpoint-mobile}) {
+      grid-column: span 1;
+    }
   }
 }
 </style>
