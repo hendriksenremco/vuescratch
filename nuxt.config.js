@@ -171,8 +171,12 @@ export default {
     '@nuxtjs/google-gtag',
     '@nuxtjs/feed',
     'nuxt-webfontloader',
-    // '@nuxtjs/amp',
+    '@nuxtjs/google-adsense',
   ],
+
+  'google-adsense': {
+    id: 'ca-pub-4674696175162885',
+  },
 
   feed: [
     {

@@ -15,6 +15,12 @@
     </header>
     <article-content>
       <div v-html="markedBody"></div>
+
+      <adsbygoogle
+        ad-slot="8210539652"
+        ad-layout="in-article"
+        ad-format="fluid"
+      />
       <p>
         Leave a comment below if you have got any questions about this article.
       </p>
