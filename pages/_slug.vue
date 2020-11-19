@@ -15,16 +15,18 @@
     </header>
     <article-content>
       <div v-html="markedBody"></div>
+      <p>
+        Leave a comment below if you have got any questions about this article.
+      </p>
+    </article-content>
 
+    <div class="article-page__add">
       <adsbygoogle
         ad-slot="8210539652"
         ad-layout="in-article"
         ad-format="fluid"
       />
-      <p>
-        Leave a comment below if you have got any questions about this article.
-      </p>
-    </article-content>
+    </div>
 
     <lazy-comments-list id="comment" :items="comments" />
     <lazy-comments-form :slug="page.fields.slug" />
@@ -124,6 +126,10 @@ export default {
     .author {
       margin: $spacing * 4 0;
     }
+  }
+
+  &__add {
+    margin-top: $spacing * 2;
   }
 
   .comments-form {
