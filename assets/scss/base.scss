@@ -47,7 +47,7 @@ body {
 }
 
 main {
-  padding-top: $spacing * 12;
+  padding-top: $spacing * 10;
 
   @media (max-width: #{$breakpoint-mobile}) {
     padding-top: $spacing * 8;

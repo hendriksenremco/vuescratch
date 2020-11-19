@@ -45,8 +45,13 @@ export default {
 </script>
 <style lang="scss">
 .article-summary {
+  max-width: $breakpoint-mobile;
   position: relative;
   overflow: hidden;
+
+  h1 {
+    margin-bottom: 0;
+  }
 
   h1 a {
     color: var(--body-fg);
@@ -58,11 +63,11 @@ export default {
   }
 
   .author {
-    margin: $spacing * 4 0;
+    margin-top: $spacing;
   }
 
   &__text {
-    margin-bottom: $spacing * 4;
+    margin: $spacing * 2 0 $spacing * 3 0;
   }
 }
 </style>

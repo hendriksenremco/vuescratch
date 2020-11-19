@@ -123,8 +123,13 @@ export default {
       padding: $spacing * 3;
     }
 
+    h1 {
+      margin: 0;
+    }
+
     .author {
-      margin: $spacing * 4 0;
+      margin-top: $spacing;
+      margin-bottom: $spacing * 4;
     }
   }
 

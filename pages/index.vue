@@ -64,6 +64,10 @@ export default {
 .home-page {
   .article-summary {
     margin-bottom: $spacing * 20;
+
+    @media (max-width: #{$breakpoint-mobile}) {
+      margin-bottom: $spacing * 15;
+    }
   }
 }
 </style>
