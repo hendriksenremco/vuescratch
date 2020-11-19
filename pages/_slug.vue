@@ -132,6 +132,7 @@ export default {
     background-color: $grey-darker;
     border-radius: $border-radius * 2;
     margin-top: $spacing * 2;
+    padding: $spacing * 4 0;
 
     @media (max-width: #{$breakpoint-tablet}) {
       padding: $spacing * 4;
