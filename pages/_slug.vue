@@ -129,7 +129,16 @@ export default {
   }
 
   &__add {
+    background-color: $grey-darker;
+    border-radius: $border-radius * 2;
     margin-top: $spacing * 2;
+
+    @media (max-width: #{$breakpoint-tablet}) {
+      padding: $spacing * 4;
+    }
+    @media (max-width: #{$breakpoint-mobile}) {
+      padding: $spacing * 3;
+    }
   }
 
   .comments-form {
