@@ -85,3 +85,35 @@ a {
     text-decoration: none;
   }
 }
+
+table {
+  border-collapse: collapse;
+  margin-bottom: $spacing * 2;
+  width: 100%;
+
+  tbody {
+    tr {
+      &:nth-child(odd) {
+        background-color: $grey-lightest;
+      }
+      &:hover {
+        background-color: $grey-lighter;
+      }
+    }
+  }
+
+  th,
+  td {
+    font-size: 0.9rem;
+    text-align: left;
+    padding: $spacing * 2;
+  }
+}
+
+ul {
+  list-style-position: outside;
+
+  li {
+    margin-left: $spacing * 4;
+  }
+}
