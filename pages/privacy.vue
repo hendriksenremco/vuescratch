@@ -24,5 +24,10 @@ export default {
       return marked(this.page.fields.body)
     },
   },
+  head() {
+    return {
+      meta: [{ hid: 'robots', name: 'robots', content: 'noindex' }],
+    }
+  },
 }
 </script>
