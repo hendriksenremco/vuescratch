@@ -128,18 +128,6 @@ export default {
     ],
   },
 
-  // webfontloader: {
-  //   custom: {
-  //     families: ['Merriweather:n4,n7', 'Raleway:n4,n8'],
-  //     urls: [
-  //       // for each Google Fonts add url + options you want
-  //       // here add font-display option
-  //       'https://fonts.googleapis.com/css?family=Merriweather:400,700',
-  //       'https://fonts.googleapis.com/css?family=Raleway:400,800',
-  //     ],
-  //   },
-  // },
-
   // Global CSS (https://go.nuxtjs.dev/config-css)
   css: [],
 
@@ -170,9 +158,18 @@ export default {
     'nuxt-rfg-icon',
     '@nuxtjs/google-gtag',
     '@nuxtjs/feed',
+    'nuxt-facebook-pixel-module',
     // 'nuxt-webfontloader',
     // '@nuxtjs/google-adsense',
   ],
+
+  facebook: {
+    /* module options */
+    track: 'PageView',
+    pixelId: '1595122517186326',
+    autoPageView: true,
+    disabled: false,
+  },
 
   // 'google-adsense': {
   //   id: 'ca-pub-4674696175162885',
