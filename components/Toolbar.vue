@@ -70,7 +70,7 @@ export default {
 
     @media (max-width: #{$breakpoint-mobile}) {
       height: $spacing * 3;
-      margin-left: $spacing * 2;
+      margin-left: $spacing * 3;
       margin-right: $spacing * 2;
     }
   }
