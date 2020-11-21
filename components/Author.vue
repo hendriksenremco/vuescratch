@@ -36,6 +36,7 @@ export default {
 <style lang="scss">
 .author {
   font-size: 0.8rem;
+  line-height: 2rem;
   color: rgba($white, 0.33);
 }
 </style>

@@ -63,10 +63,10 @@ export default {
 <style lang="scss">
 .home-page {
   .article-summary {
-    margin-bottom: $spacing * 20;
+    margin-bottom: 10.5rem;
 
     @media (max-width: #{$breakpoint-mobile}) {
-      margin-bottom: $spacing * 15;
+      margin-bottom: 8.5rem;
     }
   }
 }

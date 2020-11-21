@@ -128,8 +128,7 @@ export default {
     }
 
     .author {
-      margin-top: $spacing;
-      margin-bottom: $spacing * 4;
+      margin-bottom: 1rem;
     }
   }
 

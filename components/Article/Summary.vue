@@ -62,12 +62,8 @@ export default {
     }
   }
 
-  .author {
-    margin-top: $spacing;
-  }
-
   &__text {
-    margin: $spacing * 2 0 $spacing * 3 0;
+    margin: 0.5rem 0;
   }
 }
 </style>

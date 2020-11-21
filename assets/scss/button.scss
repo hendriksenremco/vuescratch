@@ -9,9 +9,10 @@ button,
   cursor: pointer;
   display: flex;
   font-size: 1.1rem;
+  line-height: 1rem;
   font-weight: 700;
   font-family: $font-heading;
-  padding: $spacing * 2 $spacing * 3;
+  padding: 1rem 2rem;
   appearance: none;
 
   &:hover {
