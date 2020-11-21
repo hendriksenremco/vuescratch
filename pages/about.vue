@@ -28,7 +28,8 @@
       rgba($black, 1)
     ),
     url('~assets/authors/remco.jpg');
-
+  max-width: $breakpoint-mobile;
+  margin: 0 auto;
   background-repeat: no-repeat;
   background-size: cover;
 }

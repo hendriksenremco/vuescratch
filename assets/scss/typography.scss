@@ -94,11 +94,17 @@ table {
   border-collapse: collapse;
   margin-bottom: $spacing * 2;
   width: 100%;
+  max-width: 100vw;
+  overflow-y: auto;
 
   tbody {
+    color: $black;
     tr {
       &:nth-child(odd) {
         background-color: $grey-lightest;
+      }
+      &:nth-child(even) {
+        background-color: $white;
       }
       &:hover {
         background-color: $grey-lighter;

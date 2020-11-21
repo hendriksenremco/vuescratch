@@ -1,9 +1,7 @@
 <template>
-  <div class="container" data-theme="light">
+  <div class="container">
     <h1>{{ page.fields.title }}</h1>
-    <article-content v-html="markedBody">
-      {{ markedBody }}
-    </article-content>
+    <div v-html="markedBody" />
   </div>
 </template>
 <script>
