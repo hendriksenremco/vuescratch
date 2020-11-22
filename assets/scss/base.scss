@@ -1,4 +1,4 @@
-:root {
+@mixin lightTheme {
   --body-bg: #{$black};
   --body-fg: #{$white};
   --section-bg: #{$white};
@@ -7,37 +7,32 @@
   --heading-color: #{$black};
   --accent: #{$accent};
   --link-color: #{$blue};
+}
+@mixin darkTheme {
+  --body-bg: #{$black};
+  --body-fg: #{$grey-lightest};
+  --section-bg: #{$grey-darker};
+  --section-bg-alt: #{$grey-dark};
+  --section-fg: #{$grey-lighter};
+  --heading-color: #{$grey-lightest};
+  --accent: #{$accent-muted};
+  --link-color: #{$blue-muted};
+}
 
+:root {
+  @include lightTheme;
   @media (prefers-color-scheme: dark) {
-    --accent: #{$accent-muted};
-    --body-bg: #{$black};
-    --body-fg: #{$grey-lightest};
-    --section-bg: #{$grey-darker};
-    --section-bg-alt: #{$grey-dark};
-    --section-fg: #{$grey-lighter};
-    --heading-color: #{$white};
-    --link-color: #{$blue-muted};
+    @include darkTheme;
   }
-  [data-theme="light"] {
-    --body-bg: #{$black};
-    --body-fg: #{$white};
-    --section-bg: #{$white};
-    --section-bg-alt: #{$grey-lightest};
-    --section-fg: #{$black};
-    --heading-color: #{$black};
-    --accent: #{$accent};
-    --link-color: #{$blue};
-  }
-  [data-theme="dark"] {
-    --accent: #{$accent-muted};
-    --body-bg: #{$black};
-    --body-fg: #{$grey-lightest};
-    --section-bg: #{$grey-darker};
-    --section-bg-alt: #{$grey-dark};
-    --section-fg: #{$grey-lighter};
-    --heading-color: #{$white};
-    --link-color: #{$blue-muted};
-  }
+}
+[data-theme] {
+  color: var(--body-fg);
+}
+[data-theme="light"] {
+  @include lightTheme;
+}
+[data-theme="dark"] {
+  @include darkTheme;
 }
 
 html {

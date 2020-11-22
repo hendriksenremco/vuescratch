@@ -98,16 +98,16 @@ table {
   overflow-y: auto;
 
   tbody {
-    color: $black;
+    color: var(--section-fg);
     tr {
       &:nth-child(odd) {
-        background-color: $grey-lightest;
+        background-color: var(--section-bg-alt);
       }
       &:nth-child(even) {
-        background-color: $white;
+        background-color: var(--section-bg);
       }
       &:hover {
-        background-color: $grey-lighter;
+        background-color: var(--section-bg);
       }
     }
   }

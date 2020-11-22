@@ -30,6 +30,12 @@ export default {
 
     return { results }
   },
+
+  head() {
+    return {
+      title: 'Articles about ' + this.$route.params.tag,
+    }
+  },
 }
 </script>
 <style lang="scss" scoped>

@@ -120,11 +120,11 @@ export default {
     ],
     script: [
       homeSchemaOrg(),
-      // {
-      //   'data-ad-client': 'ca-pub-4674696175162885',
-      //   src: 'https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js',
-      //   defer: true,
-      // },
+      {
+        'data-ad-client': 'ca-pub-4674696175162885',
+        src: 'https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js',
+        defer: true,
+      },
     ],
   },
 
@@ -159,9 +159,15 @@ export default {
     '@nuxtjs/google-gtag',
     '@nuxtjs/feed',
     'nuxt-facebook-pixel-module',
-    // 'nuxt-webfontloader',
+    'nuxt-webfontloader',
     // '@nuxtjs/google-adsense',
   ],
+
+  webfontloader: {
+    google: {
+      families: ['Raleway:400,800'],
+    },
+  },
 
   facebook: {
     /* module options */
@@ -171,9 +177,9 @@ export default {
     disabled: false,
   },
 
-  // 'google-adsense': {
-  //   id: 'ca-pub-4674696175162885',
-  // },
+  'google-adsense': {
+    id: 'ca-pub-4674696175162885',
+  },
 
   feed: [
     {
