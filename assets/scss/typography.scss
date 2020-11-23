@@ -1,6 +1,6 @@
 html {
   font-family: $font-base;
-  font-size: 1rem;
+  font-size: 1.2rem;
   line-height: 1.5rem;
   -ms-text-size-adjust: 100%;
   -webkit-text-size-adjust: 100%;
@@ -8,7 +8,7 @@ html {
   -webkit-font-smoothing: antialiased;
 
   @media (max-width: #{$breakpoint-tablet}) {
-    font-size: 1rem;
+    font-size: 1.1rem;
   }
   @media (max-width: #{$breakpoint-mobile}) {
     font-size: 1rem;

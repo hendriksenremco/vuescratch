@@ -141,6 +141,7 @@ export default {
     { path: '~/components/Comments/', prefix: 'comments' },
     { path: '~/components/Form/', prefix: 'form' },
     { path: '~/components/Icons/', prefix: 'icon' },
+    { path: '~/components/Search/', prefix: 'search' },
   ],
   // Modules for dev and build (recommended) (https://go.nuxtjs.dev/config-modules)
   buildModules: [
@@ -160,7 +161,7 @@ export default {
     '@nuxtjs/feed',
     'nuxt-facebook-pixel-module',
     'nuxt-webfontloader',
-    // '@nuxtjs/google-adsense',
+    '@nuxtjs/google-adsense',
   ],
 
   webfontloader: {

@@ -2,8 +2,10 @@
   <div>
     <toolbar />
     <main>
+      <search-results v-if="$route.query.q" :query="$route.query.q" />
       <Nuxt />
     </main>
+
     <app-footer />
   </div>
 </template>

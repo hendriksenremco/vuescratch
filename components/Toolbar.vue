@@ -2,16 +2,20 @@
   <header class="toolbar">
     <div class="toolbar__inner">
       <logo />
-      <!-- <nuxt-link :to="{ name: 'articles' }" class="toolbar__link"
-        >Articles</nuxt-link
-      > -->
+      <!-- <search-form v-model="query" class="hide-mobile" /> -->
       <span class="spacer"></span>
-      <nuxt-link :to="{ name: 'about' }" class="toolbar__link">About</nuxt-link>
+      <div class="toolbar__actions">
+        <nuxt-link class="toolbar__link" to="/about/">About</nuxt-link>
+      </div>
       <!-- <div class="toolbar__actions">
-        <button class="button--border-left button--icon hide-desktop">
+        <button
+          class="button--transparent button--icon hide-desktop hide-tablet"
+        >
           <search-icon />
         </button>
-        <button class="button--border-left button--icon hide-tablet">
+        <button
+          class="button--transparent button--icon hide-desktop hide-tablet"
+        >
           <menu-icon />
         </button>
       </div> -->
@@ -21,12 +25,12 @@
 <script>
 // import MenuIcon from '~/assets/icons/menu.svg?inline'
 // import SearchIcon from '~/assets/icons/search.svg?inline'
-export default {
-  // components: {
-  //   MenuIcon,
-  //   SearchIcon,
-  // },
-}
+// export default {
+//   components: {
+//     MenuIcon,
+//     SearchIcon,
+//   },
+// }
 </script>
 <style lang="scss" scoped>
 .toolbar {
@@ -42,13 +46,18 @@ export default {
     height: $spacing * 8;
   }
 
+  .hide-mobile {
+    @media (max-width: #{$breakpoint-mobile}) {
+      display: none !important;
+    }
+  }
   .hide-tablet {
-    @media (min-width: #{$breakpoint-tablet}) {
+    @media (min-width: #{$breakpoint-mobile}) {
       display: none;
     }
   }
   .hide-desktop {
-    @media (min-width: #{$breakpoint-desktop}) {
+    @media (min-width: #{$breakpoint-tablet}) {
       display: none;
     }
   }
