@@ -1,21 +1,28 @@
 <template>
   <div class="search-results">
-    <search-form show-close :value="query" @close="onClose" />
-    <div class="search-results__items">
-      <div
-        v-for="result in results.items"
-        :key="result.fields.slug"
-        class="search-results__item"
-      >
-        <h3>{{ result.fields.title }}</h3>
-        <p>
-          {{ result.fields.description }}
-        </p>
-        <nuxt-link
-          class="button"
-          :to="{ name: 'slug', params: { slug: result.fields.slug } }"
-          >Read article</nuxt-link
+    <div class="container">
+      <search-form show-close :value="query" auto-focus @close="onClose" />
+      <div v-if="results.items.length" class="search-results__items">
+        <div
+          v-for="result in results.items"
+          :key="result.fields.slug"
+          class="search-results__item"
         >
+          <h3>{{ result.fields.title }}</h3>
+          <p>
+            {{ result.fields.description }}
+          </p>
+
+          <nuxt-link
+            class="button"
+            :to="{ name: 'slug', params: { slug: result.fields.slug } }"
+            >Read article</nuxt-link
+          >
+        </div>
+      </div>
+      <div v-else class="container">
+        <h3>Nothing found for query {{ query }}</h3>
+        <p>Try something else...</p>
       </div>
     </div>
   </div>
@@ -47,11 +54,12 @@ export default {
     async search() {
       this.results = await client.getEntries({
         content_type: 'blogPost',
-        query: this.query,
+        select: 'fields.slug,fields.description,fields.title',
+        'fields.body[match]': this.query,
       })
     },
     onClose() {
-      this.$router.push({ query: { q: false } })
+      this.$router.push({ query: { q: null } })
     },
   },
 }

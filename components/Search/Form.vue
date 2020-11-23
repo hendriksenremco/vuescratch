@@ -43,14 +43,28 @@ export default {
       type: Boolean,
       default: false,
     },
+    autoFocus: {
+      type: Boolean,
+      default: false,
+    },
   },
   data() {
     return {
       typed: null,
     }
   },
+  watch: {
+    autoFocus() {
+      if (this.autoFocus) {
+        this.$refs.input.focus()
+      }
+    },
+  },
   mounted() {
-    this.$refs.input.focus()
+    if (this.autoFocus) {
+      this.$refs.input.focus()
+    }
+
     this.typed = new Typed(this.$refs.input, {
       strings: [
         'Search for component',

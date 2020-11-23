@@ -1,36 +1,45 @@
 <template>
-  <header class="toolbar">
+  <header class="toolbar" :class="{ 'toolbar--show-search': showSearch }">
     <div class="toolbar__inner">
       <logo />
-      <!-- <search-form v-model="query" class="hide-mobile" /> -->
       <span class="spacer"></span>
+      <search-form
+        :show-close="showSearch"
+        :auto-focus="showSearch"
+        :value="$route.query.q"
+        @close="showSearch = false"
+      />
+
       <div class="toolbar__actions">
-        <nuxt-link class="toolbar__link" to="/about/">About</nuxt-link>
-      </div>
-      <!-- <div class="toolbar__actions">
-        <button
-          class="button--transparent button--icon hide-desktop hide-tablet"
+        <span class="spacer"></span>
+        <div
+          class="toolbar__link hide-desktop hide-tablet"
+          @click="showSearch = true"
         >
           <search-icon />
-        </button>
-        <button
+        </div>
+        <nuxt-link class="toolbar__link" to="/about/">About</nuxt-link>
+        <!-- <button
           class="button--transparent button--icon hide-desktop hide-tablet"
         >
           <menu-icon />
-        </button>
-      </div> -->
+        </button> -->
+      </div>
     </div>
   </header>
 </template>
 <script>
-// import MenuIcon from '~/assets/icons/menu.svg?inline'
-// import SearchIcon from '~/assets/icons/search.svg?inline'
-// export default {
-//   components: {
-//     MenuIcon,
-//     SearchIcon,
-//   },
-// }
+import SearchIcon from '~/assets/icons/search.svg?inline'
+export default {
+  components: {
+    SearchIcon,
+  },
+  data() {
+    return {
+      showSearch: false,
+    }
+  },
+}
 </script>
 <style lang="scss" scoped>
 .toolbar {
@@ -59,6 +68,27 @@
   .hide-desktop {
     @media (min-width: #{$breakpoint-tablet}) {
       display: none;
+    }
+  }
+
+  .search-form {
+    max-width: 350px;
+    margin-right: $spacing * 2;
+
+    @media (max-width: #{$breakpoint-mobile}) {
+      display: none;
+      max-width: 100vh;
+      margin: 0;
+      position: absolute;
+      left: $spacing * 2;
+      right: $spacing * 2;
+      width: auto;
+    }
+  }
+
+  &--show-search {
+    .search-form {
+      display: flex;
     }
   }
 
@@ -98,6 +128,7 @@
     border-left: 1px solid $grey-darker;
     border-right: 1px solid $grey-darker;
     color: var(--body-fg);
+    fill: currentColor;
     font-size: 1rem;
     font-family: $font-heading;
     font-weight: 400;
