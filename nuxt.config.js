@@ -153,15 +153,8 @@ export default {
     '@nuxtjs/feed',
     '@nuxtjs/google-gtag',
     'nuxt-facebook-pixel-module',
-    'nuxt-webfontloader',
     // '@nuxtjs/google-adsense',
   ],
-
-  webfontloader: {
-    google: {
-      families: ['Raleway:400,800&display=swap'],
-    },
-  },
 
   facebook: {
     /* module options */
