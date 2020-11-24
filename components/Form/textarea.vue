@@ -31,7 +31,7 @@ export default {
   &__label {
     color: $white;
     font-family: $font-heading;
-    font-weight: 700;
+    font-weight: 800;
     padding: $spacing 0;
   }
 

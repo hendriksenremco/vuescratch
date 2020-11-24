@@ -21,7 +21,7 @@
   &__link {
     color: $grey;
     font-family: $font-heading;
-    font-weight: 700;
+    font-weight: 800;
     text-decoration: none;
     margin: 0 $spacing / 2;
 

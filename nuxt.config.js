@@ -166,7 +166,7 @@ export default {
 
   webfontloader: {
     google: {
-      families: ['Raleway:400,800'],
+      families: ['Raleway:400,800&display=swap'],
     },
   },
 
@@ -175,11 +175,12 @@ export default {
     track: 'PageView',
     pixelId: '1595122517186326',
     autoPageView: true,
-    disabled: false,
+    disabled: true,
   },
 
   'google-adsense': {
     id: 'ca-pub-4674696175162885',
+    onPageLoad: true,
   },
 
   feed: [

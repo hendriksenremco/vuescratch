@@ -18,7 +18,7 @@ export default {
   color: $grey;
   font-size: 0.8rem;
   font-family: $font-heading;
-  font-weight: 700;
+  font-weight: 800;
   padding: $spacing / 2 $spacing * 2;
   display: inline-flex;
   text-decoration: none;

@@ -1,2 +1,2 @@
 User-agent: *
-Sitemap: https://www.vuescratch.com/sitemap.xml
+Sitemap: https://vuescratch.com/sitemap.xml

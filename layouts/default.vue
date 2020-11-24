@@ -15,3 +15,12 @@
 @import '~/assets/scss/button.scss';
 @import '~/assets/scss/typography.scss';
 </style>
+<script>
+export default {
+  mounted() {
+    window.addEventListener('load', () => {
+      this.$fb.enable()
+    })
+  },
+}
+</script>
