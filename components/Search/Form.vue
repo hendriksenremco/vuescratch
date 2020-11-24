@@ -109,7 +109,7 @@ export default {
     box-shadow: none;
     color: $white;
     font-size: 1rem;
-    line-height: 2rem;
+    line-height: 1rem;
     padding: 0.5rem 1rem;
     width: 100%;
 

@@ -22,7 +22,7 @@
       </div>
       <div v-else class="container">
         <h3>Nothing found for query {{ query }}</h3>
-        <p>Try something else...</p>
+        <p>Try something else</p>
       </div>
     </div>
   </div>

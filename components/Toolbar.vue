@@ -39,6 +39,13 @@ export default {
       showSearch: false,
     }
   },
+  watch: {
+    '$route.query.q'() {
+      if (!this.$route.query.q) {
+        this.showSearch = false
+      }
+    },
+  },
 }
 </script>
 <style lang="scss" scoped>
