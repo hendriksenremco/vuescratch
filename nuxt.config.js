@@ -118,14 +118,7 @@ export default {
         crossorigin: true,
       },
     ],
-    script: [
-      homeSchemaOrg(),
-      {
-        'data-ad-client': 'ca-pub-4674696175162885',
-        src: 'https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js',
-        defer: true,
-      },
-    ],
+    script: [homeSchemaOrg()],
   },
 
   // Global CSS (https://go.nuxtjs.dev/config-css)
