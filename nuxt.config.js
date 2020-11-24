@@ -157,11 +157,11 @@ export default {
     '@nuxtjs/style-resources',
     '@nuxtjs/sitemap',
     'nuxt-rfg-icon',
-    '@nuxtjs/google-gtag',
     '@nuxtjs/feed',
+    '@nuxtjs/google-gtag',
     'nuxt-facebook-pixel-module',
     'nuxt-webfontloader',
-    '@nuxtjs/google-adsense',
+    // '@nuxtjs/google-adsense',
   ],
 
   webfontloader: {
@@ -175,7 +175,7 @@ export default {
     track: 'PageView',
     pixelId: '1595122517186326',
     autoPageView: true,
-    disabled: true,
+    disabled: false,
   },
 
   'google-adsense': {
