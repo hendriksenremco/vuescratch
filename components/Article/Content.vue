@@ -1,5 +1,5 @@
 <template>
-  <div class="article-content" theme="tomorrow">
+  <div class="article-content">
     <slot />
   </div>
 </template>
@@ -7,20 +7,26 @@
 import Prism from 'prismjs'
 import 'prismjs/components/prism-scss'
 import 'prismjs/components/prism-javascript'
-import 'prismjs/plugins/line-numbers/prism-line-numbers'
-import 'prismjs/plugins/line-numbers/prism-line-numbers.css'
 import 'prismjs/plugins/toolbar/prism-toolbar'
 import 'prismjs/plugins/toolbar/prism-toolbar.css'
 import 'prismjs/plugins/copy-to-clipboard/prism-copy-to-clipboard'
 export default {
-  mounted() {
-    Prism.highlightAll()
-
-    const prefersDark = window.matchMedia('(prefers-color-scheme: dark)')
-    if (prefersDark.matches) {
-      return require('prismjs/themes/prism-tomorrow.css')
+  data() {
+    return {
+      forceTheme: null,
     }
-    return require('prismjs/themes/prism.css')
+  },
+  mounted() {
+    const prefersDark =
+      getComputedStyle(document.documentElement)
+        .getPropertyValue('--theme')
+        .trim() === 'dark'
+    if (prefersDark) {
+      require(`prism-theme-one-light-dark/prism-onedark.css`)
+    } else {
+      require(`prism-theme-one-light-dark/prism-onelight.css`)
+    }
+    Prism.highlightAll()
   },
 }
 </script>

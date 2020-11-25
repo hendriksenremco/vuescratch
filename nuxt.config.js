@@ -61,7 +61,7 @@ export default {
         hid: 'description',
         name: 'description',
         content:
-          'Developing Vue applications from scratch with Vue.js, NuxtJS and SCSS.',
+          'Developing web applications from scratch with Vue.js, NuxtJS and SCSS.',
       },
       {
         hid: 'fb:app_id',
@@ -153,8 +153,15 @@ export default {
     '@nuxtjs/feed',
     '@nuxtjs/google-gtag',
     'nuxt-facebook-pixel-module',
+    'nuxt-webfontloader',
     // '@nuxtjs/google-adsense',
   ],
+
+  webfontloader: {
+    google: {
+      families: ['Roboto:400,700', 'Raleway:800'], // Loads Lato font with weights 400 and 700
+    },
+  },
 
   facebook: {
     /* module options */

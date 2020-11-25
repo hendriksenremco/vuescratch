@@ -8,10 +8,7 @@ html {
   -webkit-font-smoothing: antialiased;
 
   @media (max-width: #{$breakpoint-tablet}) {
-    font-size: 1.1rem;
-  }
-  @media (max-width: #{$breakpoint-mobile}) {
-    font-size: 1rem;
+    font-size: 1.1em;
   }
 }
 
@@ -35,7 +32,7 @@ h1 {
 }
 .h2,
 h2 {
-  font-size: 1.75rem;
+  font-size: 1.5rem;
   line-height: 2rem;
   margin: 0 0 0.5rem;
 }
@@ -46,19 +43,20 @@ h3 {
   margin: 0 0 0.5rem;
 }
 
-ul,
 p {
-  line-height: 1.5rem;
-  margin: 0 0 2rem;
+  line-height: 1.9rem;
+  margin-bottom: 1rem;
 }
 
 ul {
+  line-height: 1.9rem;
   li {
-    line-height: 1.66;
+    line-height: 1.9rem;
   }
 }
 
 blockquote {
+  margin-bottom: 2rem;
   quotes: "“" "”" "‘" "’";
   width: 100%;
 

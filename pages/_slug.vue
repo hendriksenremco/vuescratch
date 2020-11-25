@@ -141,7 +141,7 @@ export default {
   }
 
   .comments-form {
-    margin-top: $spacing * 2;
+    margin-top: $spacing * 4;
   }
 
   .article-breadcrumbs {

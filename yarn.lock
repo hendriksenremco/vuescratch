@@ -7851,6 +7851,11 @@ pretty-time@^1.1.0:
   resolved "https://registry.yarnpkg.com/pretty-time/-/pretty-time-1.1.0.tgz#ffb7429afabb8535c346a34e41873adf3d74dd0e"
   integrity sha512-28iF6xPQrP8Oa6uxE6a1biz+lWeTOAPKggvjB8HAs6nVMKZwf5bG++632Dx614hIWgUPkgivRfG+a8uAXGTIbA==
 
+prism-theme-one-light-dark@^1.0.4:
+  version "1.0.4"
+  resolved "https://registry.yarnpkg.com/prism-theme-one-light-dark/-/prism-theme-one-light-dark-1.0.4.tgz#905124d7346b2349c116e49bd6acae3da15c646f"
+  integrity sha512-ift6vo6p6llo2DP9XOUa9nIOgPMOwQ1+Kuv5cS873PuomjUzYGC8dSAP1kz9pYhK07GujLz3i/knf+5DpxAeDA==
+
 prismjs@^1.22.0:
   version "1.22.0"
   resolved "https://registry.yarnpkg.com/prismjs/-/prismjs-1.22.0.tgz#73c3400afc58a823dd7eed023f8e1ce9fd8977fa"

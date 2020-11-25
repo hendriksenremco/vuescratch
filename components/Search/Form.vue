@@ -108,7 +108,7 @@ export default {
     background-color: transparent;
     box-shadow: none;
     color: $white;
-    font-size: 1rem;
+    font-size: 0.9rem;
     line-height: 1rem;
     padding: 0.5rem 1rem;
     width: 100%;

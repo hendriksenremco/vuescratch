@@ -52,6 +52,8 @@ export default {
 .toolbar {
   background-color: rgba($black, 0.95);
   border-bottom: 1px solid $grey-darker;
+  box-shadow: 0px 4px 8px 0px rgba($black, 0.25);
+  backdrop-filter: blur(5px);
   height: $spacing * 10;
   position: fixed;
   top: 0;
@@ -137,8 +139,6 @@ export default {
     color: var(--body-fg);
     fill: currentColor;
     font-size: 1rem;
-    font-family: $font-heading;
-    font-weight: 400;
     text-decoration: none;
     letter-spacing: 1px;
     display: flex;
