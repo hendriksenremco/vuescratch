@@ -61,7 +61,7 @@ export default {
         hid: 'description',
         name: 'description',
         content:
-          'Developing web applications from scratch with Vue.js, NuxtJS and SCSS.',
+          'Developing web applications from scratch with Vue.js, NuxtJS and SCSS through examples and tutorials.',
       },
       {
         hid: 'fb:app_id',
@@ -87,7 +87,7 @@ export default {
         hid: 'og:description',
         property: 'og:title',
         content:
-          'Developing Vue applications from scratch with Vue.js, NuxtJS and SCSS.',
+          'Developing web applications from scratch with Vue.js, NuxtJS and SCSS through examples and tutorials.',
       },
       {
         hid: 'og:site_name',
