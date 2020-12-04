@@ -17,23 +17,23 @@ export default {
     }
   },
   mounted() {
-    const prefersDark =
-      getComputedStyle(document.documentElement)
-        .getPropertyValue('--theme')
-        .trim() === 'dark'
-    if (prefersDark) {
-      require(`prism-theme-one-light-dark/prism-onedark.css`)
-    } else {
-      require(`prism-theme-one-light-dark/prism-onelight.css`)
-    }
+    // const prefersDark =
+    //   getComputedStyle(document.documentElement)
+    //     .getPropertyValue('--theme')
+    //     .trim() === 'dark'
+    // if (prefersDark) {
+    //   require(`prism-theme-one-light-dark/prism-onedark.css`)
+    // } else {
+    require(`prism-theme-one-light-dark/prism-onelight.css`)
+    // }
     Prism.highlightAll()
   },
 }
 </script>
 <style lang="scss">
 .article-content {
-  background-color: var(--section-bg);
-  color: var(--section-fg);
+  background-color: $white;
+  color: $black;
   border-radius: $spacing * 2;
   padding: $spacing * 8;
 
@@ -45,7 +45,7 @@ export default {
   }
 
   a {
-    color: var(--link-color);
+    color: $blue;
   }
 
   p:last-child {

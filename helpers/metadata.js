@@ -31,13 +31,27 @@ export function homeSchemaOrg() {
           url: 'https://vuescratch.com/icon.png',
           caption: 'VueScratch',
         },
-        potentialAction: {
-          '@type': 'ReadAction',
-          target: {
-            '@type': 'EntryPoint',
-            urlTemplate: 'https://vuescratch.com/',
+        potentialAction: [
+          {
+            '@type': 'ReadAction',
+            target: {
+              '@type': 'EntryPoint',
+              urlTemplate: 'https://vuescratch.com/',
+            },
           },
-        },
+          {
+            '@type': 'SearchAction',
+            target: {
+              '@type': 'EntryPoint',
+              urlTemplate: 'https://vuescratch.com/?q={search_term}',
+            },
+            queryInput: {
+              '@type': 'PropertyValueSpecification',
+              valueRequired: 'http://schema.org/True',
+              valueName: 'search_term',
+            },
+          },
+        ],
       },
     },
   }
@@ -197,6 +211,7 @@ export function articleSchemaOrg({ page, comments }) {
       url: `https://vuescratch.com/${page.fields.slug}/`,
       comment: commentsData,
       commentCount: commentsData.length,
+      wordCount: page.fields.body.split(' ').length,
       mainEntityOfPage: {
         '@type': 'Website',
         '@id': `https://vuescratch.com/${page.fields.slug}/#article`,
@@ -222,6 +237,18 @@ export function articleSchemaOrg({ page, comments }) {
           target: {
             '@type': 'EntryPoint',
             urlTemplate: `https://vuescratch.com/${page.fields.slug}/#comment`,
+          },
+        },
+        {
+          '@type': 'SearchAction',
+          target: {
+            '@type': 'EntryPoint',
+            urlTemplate: 'https://vuescratch.com/?q={search_term}',
+          },
+          queryInput: {
+            '@type': 'PropertyValueSpecification',
+            valueRequired: 'http://schema.org/True',
+            valueName: 'search_term',
           },
         },
       ],

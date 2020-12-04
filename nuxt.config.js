@@ -110,12 +110,28 @@ export default {
       {
         rel: 'preconnect',
         href: 'https://pagead2.googlesyndication.com',
-        crossorigin: true,
       },
       {
         rel: 'preconnect',
         href: 'https://tpc.googlesyndication.com',
-        crossorigin: true,
+      },
+      {
+        rel: 'dns-prefetch',
+        href: 'https://pagead2.googlesyndication.com',
+      },
+      {
+        rel: 'dns-prefetch',
+        href: 'https://tpc.googlesyndication.com',
+      },
+      {
+        rel: 'dns-prefetch',
+        href: 'https://images.ctfassets.net/',
+      },
+      {
+        rel: 'search',
+        type: 'application/opensearchdescription+xml',
+        href: '/opensearch.xml',
+        title: 'VueScratch',
       },
     ],
     script: [homeSchemaOrg()],
