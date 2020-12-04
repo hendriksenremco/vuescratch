@@ -41,15 +41,8 @@ export function homeSchemaOrg() {
           },
           {
             '@type': 'SearchAction',
-            target: {
-              '@type': 'EntryPoint',
-              urlTemplate: 'https://vuescratch.com/?q={search_term}',
-            },
-            queryInput: {
-              '@type': 'PropertyValueSpecification',
-              valueRequired: 'http://schema.org/True',
-              valueName: 'search_term',
-            },
+            target: 'https://vuescratch.com/?q={search_term_string}',
+            'query-input': 'required name=search_term_string',
           },
         ],
       },
@@ -241,15 +234,8 @@ export function articleSchemaOrg({ page, comments }) {
         },
         {
           '@type': 'SearchAction',
-          target: {
-            '@type': 'EntryPoint',
-            urlTemplate: 'https://vuescratch.com/?q={search_term}',
-          },
-          queryInput: {
-            '@type': 'PropertyValueSpecification',
-            valueRequired: 'http://schema.org/True',
-            valueName: 'search_term',
-          },
+          target: 'https://vuescratch.com/?q={search_term_string}',
+          'query-input': 'required name=search_term_string',
         },
       ],
     },
