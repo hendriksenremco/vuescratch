@@ -16,7 +16,11 @@ export function homeSchemaOrg() {
         '@id': 'https://vuescratch.com#organization',
         name: 'VueScratch',
         url: 'https://vuescratch.com',
-        sameAs: 'https://twitter.com/vuescratch',
+        sameAs: [
+          'https://twitter.com/vuescratch',
+          'https://pinterest.com/vuescratch',
+          'https://facebook.com/vuescratch',
+        ],
         logo: {
           '@type': 'ImageObject',
           '@id': 'https://vuescratch.com/#logo',
@@ -171,7 +175,11 @@ export function articleSchemaOrg({ page, comments }) {
         '@id': 'https://vuescratch.com/#organization',
         name: 'VueScratch',
         url: 'https://vuescratch.com',
-        sameAs: 'https://twitter.com/vuescratch',
+        sameAs: [
+          'https://twitter.com/vuescratch',
+          'https://pinterest.com/vuescratch',
+          'https://facebook.com/vuescratch',
+        ],
         logo: {
           '@type': 'ImageObject',
           '@id': 'https://vuescratch.com/#logo',

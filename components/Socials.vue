@@ -1,7 +1,7 @@
 <template>
   <div class="socials">
     <a
-      href="https://facebook.com/VueScratch-114362063809302"
+      href="https://facebook.com/VueScratch"
       title="Facebook"
       class="socials__item"
     >
@@ -13,6 +13,13 @@
       title="Twitter"
     >
       <icon-twitter />
+    </a>
+    <a
+      href="https://pinterest.com/VueScratch"
+      class="socials__item"
+      title="Pinterest"
+    >
+      <icon-pinterest />
     </a>
     <a href="/feed.rss" title="RSS" class="socials__item">
       <icon-rss />
