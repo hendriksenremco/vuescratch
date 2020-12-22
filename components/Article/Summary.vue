@@ -45,7 +45,7 @@ export default {
 </script>
 <style lang="scss">
 .article-summary {
-  max-width: $breakpoint-mobile;
+  max-width: $breakpoint-tablet;
   position: relative;
   overflow: hidden;
 

@@ -1,25 +1,37 @@
 <template>
   <div class="container about">
-    <h1>About VueScratch</h1>
-    <p>
-      VueScratch is a site all about building awesome Vue applications.
-      Encouraging developers to build more functionality from scratch, without
-      the need of an external framework.
-    </p>
-    <p>
-      It is extremely fun to get things done yourself, and it gives you the most
-      control over the code.
-    </p>
-    <p>
-      I will be posting small chunks of code which i build for this site, but
-      also make some series which covers building bigger applications. I hope
-      you will enjoy my content and if you've got some to say to me, use the
-      form below to contact me.
-    </p>
+    <h1>{{ page.fields.title }}</h1>
+    <div v-html="markedBody" />
 
     <contact-form />
   </div>
 </template>
+<script>
+import marked from 'marked'
+import { createClient } from '~/plugins/contentful.js'
+export default {
+  async asyncData() {
+    const client = createClient()
+    const pages = await client.getEntries({
+      content_type: 'page',
+      'fields.slug': 'about',
+    })
+
+    return { page: pages.items[0] }
+  },
+  computed: {
+    markedBody() {
+      return marked(this.page.fields.body)
+    },
+  },
+  head() {
+    return {
+      meta: [{ hid: 'robots', name: 'robots', content: 'noindex' }],
+    }
+  },
+}
+</script>
+
 <style lang="scss">
 .about {
   background: radial-gradient(
