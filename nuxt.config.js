@@ -206,18 +206,18 @@ export default {
         for (const article of articles.items) {
           feed.addItem({
             title: article.fields.title,
-            id: article.fields.slug,
+            id: `https://vuescratch.com/${article.fields.slug}`,
             link: `https://vuescratch.com/${article.fields.slug}`,
             description: article.fields.description,
+            author: [
+              {
+                name: article.fields.author.fields.name,
+                email: article.fields.author.fields.email,
+              },
+            ],
             content: marked(article.fields.body),
             image: 'https:' + article.fields.heroImage.fields.file.url,
             date: new Date(article.sys.createdAt),
-          })
-          feed.addContributor({
-            name: article.fields.author.fields.name,
-            email: article.fields.author.fields.email,
-            link:
-              'https://vuescratch.com/#' + article.fields.author.fields.slug,
           })
         }
 
