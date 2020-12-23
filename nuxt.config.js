@@ -210,12 +210,21 @@ export default {
             link: `https://vuescratch.com/${article.fields.slug}`,
             description: article.fields.description,
             content: marked(article.fields.body),
+            image: 'https:' + article.fields.heroImage.fields.file.url,
+            date: new Date(article.sys.createdAt),
+          })
+          feed.addContributor({
+            name: article.fields.author.fields.name,
+            email: article.fields.author.fields.email,
+            link:
+              'https://vuescratch.com/#' + article.fields.author.fields.slug,
           })
         }
 
         feed.options = {
           title: 'VueScratch',
           link: 'https://vuescratch.com',
+          language: 'en',
           description:
             'Developing web applications from scratch with Vue.js, NuxtJS and SCSS through examples and tutorials.',
         }
