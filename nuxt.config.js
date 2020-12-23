@@ -212,6 +212,13 @@ export default {
             content: marked(article.fields.body),
           })
         }
+
+        feed.options = {
+          title: 'VueScratch',
+          link: 'https://vuescratch.com',
+          description:
+            'Developing web applications from scratch with Vue.js, NuxtJS and SCSS through examples and tutorials.',
+        }
       },
       cacheTime: 1000 * 60 * 15, // How long should the feed be cached
       type: 'rss2',
