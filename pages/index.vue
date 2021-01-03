@@ -1,16 +1,16 @@
 <template>
   <div class="home-page container">
-    <lazy-article-summary
+    <article-card
       v-for="article in articles.items"
       :key="article.fields.slug"
-      :date="article.sys.createdAt"
-      :author="article.fields.author"
-      :image="article.fields.heroImage.fields.file.url"
-      :slug="article.fields.slug"
       :title="article.fields.title"
-    >
-      {{ article.fields.description }}
-    </lazy-article-summary>
+      :slug="article.fields.slug"
+      :description="article.fields.description"
+      :image="article.fields.heroImage.fields.file.url"
+      :author="article.fields.author.fields.name"
+      :author-image="article.fields.author.fields.image.fields.file.url"
+      :date="article.sys.createdAt"
+    />
     <intersection-observer @intersect="loadMore" />
   </div>
 </template>
@@ -62,12 +62,13 @@ export default {
 
 <style lang="scss">
 .home-page {
-  .article-summary {
-    margin-bottom: 10.5rem;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-gap: $spacing * 4;
 
-    @media (max-width: #{$breakpoint-mobile}) {
-      margin-bottom: 8.5rem;
-    }
+  @media (max-width: #{$breakpoint-mobile}) {
+    grid-template-columns: 1fr;
+    grid-gap: $spacing * 2;
   }
 }
 </style>

@@ -30,10 +30,10 @@
 [data-theme] {
   color: var(--body-fg);
 }
-[data-theme="light"] {
+[data-theme='light'] {
   @include lightTheme;
 }
-[data-theme="dark"] {
+[data-theme='dark'] {
   @include darkTheme;
 }
 
@@ -75,7 +75,7 @@ main {
   max-width: $breakpoint-tablet;
   margin: 0 auto;
   min-height: 100vh;
-  padding-top: $spacing * 4;
+  padding: $spacing * 4 0;
 
   @media (max-width: #{$breakpoint-tablet}) {
     padding: $spacing * 4;

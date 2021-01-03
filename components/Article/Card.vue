@@ -1,10 +1,18 @@
 <template>
   <nuxt-link class="article-card" :to="{ name: 'slug', params: { slug } }">
-    <h3>{{ title }}</h3>
-    <p>
-      {{ description }}
-    </p>
-    <div class="button">Read article</div>
+    <div
+      v-if="image"
+      class="article-card__image"
+      :style="{ 'background-image': `url(${image})` }"
+    />
+    <div class="article-card__content">
+      <h3>{{ title }}</h3>
+      <lazy-author :author="author" :image="authorImage" :date="date" />
+      <p>
+        {{ description }}
+      </p>
+      <div class="button">Read article</div>
+    </div>
   </nuxt-link>
 </template>
 <script>
@@ -12,15 +20,27 @@ export default {
   props: {
     slug: {
       type: String,
-      default: '',
+      default: null,
     },
     title: {
       type: String,
-      default: '',
+      default: null,
     },
     description: {
       type: String,
-      default: '',
+      default: null,
+    },
+    author: {
+      type: String,
+      default: null,
+    },
+    authorImage: {
+      type: String,
+      default: null,
+    },
+    date: {
+      type: String,
+      default: null,
     },
     image: {
       type: String,
@@ -36,14 +56,25 @@ export default {
   color: $grey-lighter;
   display: flex;
   flex-direction: column;
-  padding: $spacing * 4;
+  overflow: hidden;
   text-decoration: none;
   position: relative;
   transition: transform 150ms ease, box-shadow 150ms ease;
   width: 100%;
 
-  @media (max-width: #{$breakpoint-mobile}) {
-    padding: $spacing * 3;
+  &__content {
+    padding: $spacing * 4;
+
+    @media (max-width: #{$breakpoint-mobile}) {
+      padding: $spacing * 3;
+    }
+  }
+
+  &__image {
+    background-size: cover;
+    background-position: center;
+    width: 100%;
+    padding-bottom: 52.75%;
   }
 
   > * {

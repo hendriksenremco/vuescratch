@@ -63,7 +63,8 @@ export default {
   }
 
   &__text {
-    margin: 0.5rem 0;
+    font-size: 0.9rem;
+    margin-bottom: 0.5rem;
   }
 }
 </style>

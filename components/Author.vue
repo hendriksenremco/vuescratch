@@ -1,6 +1,12 @@
 <template>
   <div v-if="author" class="author">
-    by <span>{{ author }}</span> on <span>{{ dateString }}</span>
+    <div
+      class="author__image"
+      :style="{ 'background-image': 'url(' + image + ')' }"
+    />
+    <div>
+      <b>{{ author }}</b> on {{ dateString }}
+    </div>
   </div>
 </template>
 <script>
@@ -24,7 +30,7 @@ export default {
       const options = {
         year: 'numeric',
         day: 'numeric',
-        month: 'long',
+        month: 'short',
       }
       const dtFormat = new Intl.DateTimeFormat('en-EN', options)
 
@@ -35,8 +41,19 @@ export default {
 </script>
 <style lang="scss">
 .author {
+  align-items: center;
+  display: flex;
   font-size: 0.8rem;
-  line-height: 2rem;
+  line-height: 1rem;
+  margin: 0.5rem 0;
   color: rgba($white, 0.33);
+
+  &__image {
+    background-size: cover;
+    border-radius: 100%;
+    margin-right: $spacing * 2;
+    width: $spacing * 4;
+    height: $spacing * 4;
+  }
 }
 </style>
