@@ -64,11 +64,11 @@ export default {
 .home-page {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  grid-gap: $spacing * 4;
+  grid-gap: $spacing * 6;
 
   @media (max-width: #{$breakpoint-mobile}) {
     grid-template-columns: 1fr;
-    grid-gap: $spacing * 2;
+    grid-gap: $spacing * 3;
   }
 }
 </style>

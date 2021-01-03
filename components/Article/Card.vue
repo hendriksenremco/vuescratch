@@ -53,7 +53,7 @@ export default {
 .article-card {
   background-color: $grey-darker;
   border-radius: $border-radius * 2;
-  color: $grey-lighter;
+  color: $white;
   display: flex;
   flex-direction: column;
   overflow: hidden;
@@ -63,6 +63,9 @@ export default {
   width: 100%;
 
   &__content {
+    display: flex;
+    height: 100%;
+    flex-direction: column;
     padding: $spacing * 4;
 
     @media (max-width: #{$breakpoint-mobile}) {
@@ -93,6 +96,7 @@ export default {
   &:hover {
     // box-shadow: 0 0 10px 0 rgba($black, 0.2);
     transform: scale(1.05);
+    color: $accent;
   }
 }
 </style>
