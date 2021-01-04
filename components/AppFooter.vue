@@ -11,7 +11,8 @@
 </template>
 <style lang="scss">
 .app-footer {
-  border-top: 1px solid $grey-darker;
+  background: linear-gradient(0deg, rgba($black, 1), rgba($black, 0));
+  // border-top: 1px solid rgba($black, 0.5);
   color: $grey-lighter;
 
   &__socials {

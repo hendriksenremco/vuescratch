@@ -124,6 +124,7 @@ export default {
     }
 
     h1 {
+      text-shadow: 0px 0px 10px rgba($black, 1);
       margin: 0;
     }
 

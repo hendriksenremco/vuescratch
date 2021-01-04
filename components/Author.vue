@@ -46,7 +46,7 @@ export default {
   font-size: 0.8rem;
   line-height: 1rem;
   margin: 0.5rem 0;
-  color: rgba($white, 0.33);
+  color: rgba($white, 0.5);
 
   &__image {
     background-size: cover;

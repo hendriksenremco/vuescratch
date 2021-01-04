@@ -50,8 +50,8 @@ export default {
 </script>
 <style lang="scss" scoped>
 .toolbar {
-  background-color: rgba($black, 0.95);
-  border-bottom: 1px solid $grey-darker;
+  background-color: rgba($black, 0.9);
+  // border-bottom: 1px solid $grey-darker;
   box-shadow: 0px 4px 8px 0px rgba($black, 0.25);
   backdrop-filter: blur(5px);
   height: $spacing * 10;
@@ -134,8 +134,8 @@ export default {
   }
 
   &__link {
-    border-left: 1px solid $grey-darker;
-    border-right: 1px solid $grey-darker;
+    // border-left: 1px solid $grey-darker;
+    // border-right: 1px solid $grey-darker;
     color: var(--body-fg);
     fill: currentColor;
     font-size: 1rem;

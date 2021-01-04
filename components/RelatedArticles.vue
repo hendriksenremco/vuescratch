@@ -40,9 +40,9 @@ export default {
   }
 
   &__title {
-    color: $grey-darker;
+    color: rgba($white, 0.25);
     margin-top: $spacing * 2;
-    font-size: 3rem;
+    font-size: 2rem;
     text-align: left;
   }
 }
