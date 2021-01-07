@@ -1,10 +1,8 @@
 <template>
   <nuxt-link class="article-card" :to="{ name: 'slug', params: { slug } }">
-    <div
-      v-if="image"
-      class="article-card__image"
-      :style="{ 'background-image': `url(${image})` }"
-    />
+    <div v-if="image" class="article-card__image">
+      <lazy-image :src="`${image}?fm=webp&w=500`" />
+    </div>
     <div class="article-card__content">
       <h3>{{ title }}</h3>
       <lazy-author :author="author" :image="authorImage" :date="date" />
@@ -74,10 +72,16 @@ export default {
   }
 
   &__image {
-    background-size: cover;
-    background-position: center;
+    display: flex;
     width: 100%;
     padding-bottom: 52.75%;
+
+    img {
+      object-fit: cover;
+      width: 100%;
+      height: 100%;
+      position: absolute;
+    }
   }
 
   > * {

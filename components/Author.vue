@@ -2,7 +2,7 @@
   <div v-if="author" class="author">
     <div
       class="author__image"
-      :style="{ 'background-image': 'url(' + image + ')' }"
+      :style="{ 'background-image': 'url(' + image + '?fm=webp&w=64&h=64)' }"
     />
     <div>
       <b>{{ author }}</b> on {{ dateString }}

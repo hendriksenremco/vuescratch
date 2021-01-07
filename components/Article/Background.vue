@@ -1,8 +1,24 @@
 <template>
-  <div
-    class="article-background"
-    :style="{ backgroundImage: 'url(' + image + '?fm=webp)' }"
-  ></div>
+  <picture class="article-background">
+    <source
+      :srcset="`${image}?fm=webp&q=50&w=3000`"
+      media="(min-width: 1800px)"
+    />
+    <source
+      :srcset="`${image}?fm=webp&q=50&w=1800`"
+      media="(min-width: 1200px)"
+    />
+    <source
+      :srcset="`${image}?fm=webp&q=50&w=1200`"
+      media="(min-width: 800px)"
+    />
+    <source
+      :srcset="`${image}?fm=webp&q=50&w=800`"
+      media="(min-width: 400px)"
+    />
+
+    <img :src="`${image}?fm=webp&q=50&w=400`" />
+  </picture>
 </template>
 <script>
 export default {
@@ -16,12 +32,8 @@ export default {
 </script>
 <style lang="scss">
 .article-background {
-  background-size: cover;
-  background-position: 50% 50%;
-  background-repeat: no-repeat;
-
-  // border-radius: 9999px;
-  width: 100%;
+  display: flex;
+  width: auto;
   height: 100%;
   position: fixed;
   top: 0;
@@ -30,21 +42,11 @@ export default {
   right: 0;
   z-index: -1;
   opacity: 20%;
-  // &:after {
-  //   content: '';
-  //   background: radial-gradient(
-  //     ellipse closest-side,
-  //     rgba($black, 0.8),
-  //     rgba($black, 1)
-  //   );
-  //   border-radius: 9999px;
-  //   position: absolute;
-  //   top: 0;
-  //   left: 0;
-  //   width: 100%;
-  //   height: 100%;
-  //   z-index: 2;
-  //   transform: scale(1.01);
-  // }
+
+  img {
+    object-fit: cover;
+    width: 100%;
+    pointer-events: none;
+  }
 }
 </style>
