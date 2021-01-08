@@ -41,7 +41,7 @@ export default {
   left: 0;
   right: 0;
   z-index: -1;
-  opacity: 20%;
+  opacity: 0.2;
 
   img {
     object-fit: cover;
