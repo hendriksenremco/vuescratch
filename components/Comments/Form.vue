@@ -1,6 +1,5 @@
 <template>
   <form class="comments-form" method="POST" @submit.prevent="onSubmit">
-    <h2 v-if="!success" class="comments-form__title">Leave a comment</h2>
     <form-input
       v-if="!success"
       v-model="beer"

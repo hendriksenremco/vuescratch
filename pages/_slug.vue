@@ -29,8 +29,11 @@
     </div> -->
 
     <lazy-comments-list id="comment" :items="comments" />
+
+    <h2 class="article-page__subtitle">Leave a comment</h2>
     <lazy-comments-form :slug="page.fields.slug" />
 
+    <h2 class="article-page__subtitle">More articles</h2>
     <lazy-related-articles :articles="related" />
   </div>
 </template>
@@ -133,16 +136,20 @@ export default {
     }
   }
 
+  &__subtitle {
+    color: rgba($white, 0.25);
+    margin-top: $spacing * 6;
+    padding-left: $spacing * 3;
+    font-size: 2rem;
+    text-align: left;
+  }
+
   &__add {
     background-color: $grey-darker;
     border-radius: $border-radius * 2;
     margin-top: $spacing * 2;
     padding: $spacing * 2;
     overflow: hidden;
-  }
-
-  .comments-form {
-    margin-top: $spacing * 4;
   }
 
   .article-breadcrumbs {
