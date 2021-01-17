@@ -147,7 +147,7 @@ export default {
   &__add {
     background-color: $grey-darker;
     border-radius: $border-radius * 2;
-    margin-top: $spacing * 4;
+    margin-top: $spacing * 6;
     padding: $spacing * 2;
     overflow: hidden;
   }
