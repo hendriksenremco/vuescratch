@@ -3,6 +3,7 @@
     <h1>{{ page.fields.title }}</h1>
     <div v-html="markedBody" />
 
+    <h2 class="about__subtitle">Contact me</h2>
     <contact-form />
   </div>
 </template>
@@ -40,6 +41,14 @@ export default {
 
   p {
     max-width: $breakpoint-mobile;
+  }
+
+  &__subtitle {
+    color: rgba($white, 0.25);
+    margin-top: $spacing * 6;
+    padding-left: $spacing * 3;
+    font-size: 2rem;
+    text-align: left;
   }
 }
 </style>
