@@ -51,5 +51,9 @@ export default {
   p:last-child {
     margin-bottom: 0;
   }
+
+  pre[class*='language-'] {
+    margin-bottom: 2rem;
+  }
 }
 </style>
