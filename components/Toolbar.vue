@@ -109,11 +109,12 @@ export default {
     height: $spacing * 4;
     width: auto;
     margin-top: -2px;
-    margin-right: $spacing * 4;
+    margin-right: $spacing * 3;
+    margin-left: $spacing * 3;
 
     @media (max-width: #{$breakpoint-tablet}) {
       height: $spacing * 3;
-      margin-left: $spacing * 4;
+      margin-left: $spacing * 3;
     }
 
     @media (max-width: #{$breakpoint-mobile}) {
@@ -127,7 +128,7 @@ export default {
     align-items: center;
     justify-content: flex-start;
     display: flex;
-    max-width: $breakpoint-tablet;
+    max-width: $breakpoint-desktop;
     height: 100%;
     width: 100%;
     margin: 0 auto;

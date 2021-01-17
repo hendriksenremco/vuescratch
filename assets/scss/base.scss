@@ -72,16 +72,8 @@ main {
 }
 
 .container {
-  max-width: $breakpoint-tablet;
+  max-width: $breakpoint-desktop;
   margin: 0 auto;
   min-height: 100vh;
-  padding: $spacing * 4 0;
-
-  @media (max-width: #{$breakpoint-tablet}) {
-    padding: $spacing * 4;
-  }
-
-  @media (max-width: #{$breakpoint-mobile}) {
-    padding: $spacing * 4 $spacing * 3;
-  }
+  padding: $spacing * 3;
 }

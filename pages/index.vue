@@ -1,17 +1,31 @@
 <template>
   <div class="home-page container">
-    <article-card
-      v-for="article in articles.items"
-      :key="article.fields.slug"
-      :title="article.fields.title"
-      :slug="article.fields.slug"
-      :description="article.fields.description"
-      :image="article.fields.heroImage.fields.file.url"
-      :author="article.fields.author.fields.name"
-      :author-image="article.fields.author.fields.image.fields.file.url"
-      :date="article.sys.createdAt"
-    />
-    <intersection-observer @intersect="loadMore" />
+    <div class="home-page__articles">
+      <article-card
+        v-for="article in articles.items"
+        :key="article.fields.slug"
+        :title="article.fields.title"
+        :slug="article.fields.slug"
+        :description="article.fields.description"
+        :image="article.fields.heroImage.fields.file.url"
+        :author="article.fields.author.fields.name"
+        :author-image="article.fields.author.fields.image.fields.file.url"
+        :date="article.sys.createdAt"
+      />
+      <intersection-observer @intersect="loadMore" />
+    </div>
+    <div class="home-page__powered">
+      <h3>This blog is powered by</h3>
+      <a href="https://www.contentful.com">
+        <img src="~assets/logos/contentfull.svg" />
+      </a>
+      <a href="https://www.netlify.com">
+        <img src="~assets/logos/netlify.svg" />
+      </a>
+      <a href="https://www.unsplash.com">
+        <img src="~assets/logos/unsplash.svg" />
+      </a>
+    </div>
   </div>
 </template>
 
@@ -63,12 +77,41 @@ export default {
 <style lang="scss">
 .home-page {
   display: grid;
-  grid-template-columns: 1fr 1fr;
-  grid-gap: $spacing * 6;
+  grid-template-columns: minmax(0, 1fr) 300px;
 
   @media (max-width: #{$breakpoint-mobile}) {
     grid-template-columns: 1fr;
     grid-gap: $spacing * 3;
+  }
+
+  &__articles {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    grid-gap: $spacing * 3;
+  }
+
+  &__powered {
+    display: grid;
+    align-content: flex-start;
+    grid-gap: $spacing * 6;
+    text-align: center;
+
+    h3 {
+      font-size: 1rem;
+      opacity: 0.3;
+    }
+
+    img {
+      width: 66%;
+      margin: 0 auto;
+      height: auto;
+      opacity: 0.3;
+      transition: opacity 150ms ease;
+
+      &:hover {
+        opacity: 0.5;
+      }
+    }
   }
 }
 </style>
