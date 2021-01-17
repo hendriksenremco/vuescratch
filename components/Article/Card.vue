@@ -75,6 +75,7 @@ export default {
     display: flex;
     width: 100%;
     padding-bottom: 52.75%;
+    overflow: hidden;
 
     img {
       object-fit: cover;
