@@ -75,9 +75,10 @@ export default {
     display: flex;
     width: 100%;
     padding-bottom: 52.75%;
-    overflow: hidden;
 
     img {
+      border-top-left-radius: $border-radius * 2;
+      border-top-right-radius: $border-radius * 2;
       object-fit: cover;
       width: 100%;
       height: 100%;
