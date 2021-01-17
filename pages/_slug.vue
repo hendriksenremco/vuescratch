@@ -20,13 +20,13 @@
       </p>
     </article-content>
 
-    <!-- <div class="article-page__add">
+    <div class="article-page__add">
       <adsbygoogle
         ad-slot="8210539652"
         ad-layout="in-article"
         ad-format="fluid"
       />
-    </div> -->
+    </div>
 
     <lazy-comments-list id="comment" :items="comments" />
 
@@ -147,7 +147,7 @@ export default {
   &__add {
     background-color: $grey-darker;
     border-radius: $border-radius * 2;
-    margin-top: $spacing * 2;
+    margin-top: $spacing * 4;
     padding: $spacing * 2;
     overflow: hidden;
   }
