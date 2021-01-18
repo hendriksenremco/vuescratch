@@ -87,7 +87,11 @@ export default {
   &__articles {
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
-    grid-gap: $spacing * 3;
+    grid-gap: $spacing * 6;
+
+    @media (max-width: #{$breakpoint-mobile}) {
+      grid-gap: $spacing * 3;
+    }
   }
 
   &__powered {
