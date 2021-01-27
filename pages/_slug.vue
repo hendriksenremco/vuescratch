@@ -19,14 +19,15 @@
       <strong>
         Leave a comment below if you have got any questions about this article.
       </strong>
-      <!-- <adsbygoogle
+    </article-content>
+
+    <div class="article-page__add">
+      <adsbygoogle
         ad-slot="8210539652"
         ad-layout="in-article"
         ad-format="fluid"
-      /> -->
-    </article-content>
-
-    <!-- <div class="article-page__add"></div> -->
+      />
+    </div>
 
     <lazy-comments-list id="comment" :items="comments" />
 
@@ -144,7 +145,7 @@ export default {
   }
 
   &__add {
-    background-color: rgba($black, 0.5);
+    background-color: $black;
     border-radius: $border-radius * 2;
     margin-top: $spacing * 6;
     padding: $spacing * 2;
