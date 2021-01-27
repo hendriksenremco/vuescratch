@@ -6,28 +6,13 @@
         <article-card
           v-for="result in results.items"
           :key="result.fields.slug"
+          :slug="result.fields.slug"
           :title="result.fields.title"
           :description="result.fields.description"
           :author="result.fields.author.fields.name"
           :author-image="result.fields.author.fields.image.fields.file.url"
           :date="result.sys.createdAt"
         />
-        <!-- <div
-          v-for="result in results.items"
-          :key="result.fields.slug"
-          class="search-results__item"
-        >
-          <h3>{{ result.fields.title }}</h3>
-          <p>
-            {{ result.fields.description }}
-          </p>
-
-          <nuxt-link
-            class="button"
-            :to="{ name: 'slug', params: { slug: result.fields.slug } }"
-            >Read article</nuxt-link
-          >
-        </div> -->
       </div>
       <div v-else class="container">
         <h3>Nothing found for query {{ query }}</h3>
