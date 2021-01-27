@@ -18,19 +18,34 @@
       <h3>This blog is powered by</h3>
       <a
         href="https://www.contentful.com"
-        @click="$gtag('event', 'clickout', 'Contenful.com')"
+        @click="
+          $gtag('event', 'clickout', {
+            event_category: 'powered',
+            event_label: 'Contenful.com',
+          })
+        "
       >
         <img src="~assets/logos/contentfull.svg" />
       </a>
       <a
         href="https://www.netlify.com"
-        @click="$gtag('event', 'clickout', 'Netlify.com')"
+        @click="
+          $gtag('event', 'clickout', {
+            event_category: 'powered',
+            event_label: 'Netlify.com',
+          })
+        "
       >
         <img src="~assets/logos/netlify.svg" />
       </a>
       <a
         href="https://www.unsplash.com"
-        @click="$gtag('event', 'clickout', 'Unsplash.com')"
+        @click="
+          $gtag('event', 'clickout', {
+            event_category: 'powered',
+            event_label: 'Unsplash.com',
+          })
+        "
       >
         <img src="~assets/logos/unsplash.svg" />
       </a>
