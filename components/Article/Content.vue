@@ -48,10 +48,6 @@ export default {
     color: $blue;
   }
 
-  p:last-child {
-    margin-bottom: 0;
-  }
-
   pre[class*='language-'] {
     margin-bottom: 2rem;
   }

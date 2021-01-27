@@ -32,12 +32,13 @@ export default {
 .about {
   background: radial-gradient(
       ellipse closest-side,
-      rgba($black, 0.75),
+      rgba($black, 0.25),
       rgba($black, 1)
     ),
     url('~assets/authors/remco.jpg');
   background-repeat: no-repeat;
   background-size: cover;
+  background-position: 50% 50%;
 
   p {
     max-width: $breakpoint-mobile;

@@ -16,18 +16,17 @@
     </header>
     <article-content>
       <div v-html="markedBody"></div>
-      <p>
+      <strong>
         Leave a comment below if you have got any questions about this article.
-      </p>
-    </article-content>
-
-    <div class="article-page__add">
+      </strong>
       <adsbygoogle
         ad-slot="8210539652"
         ad-layout="in-article"
         ad-format="fluid"
       />
-    </div>
+    </article-content>
+
+    <!-- <div class="article-page__add"></div> -->
 
     <lazy-comments-list id="comment" :items="comments" />
 
