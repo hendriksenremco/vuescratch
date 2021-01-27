@@ -21,13 +21,13 @@
       </strong>
     </article-content>
 
-    <div class="article-page__add">
+    <!-- <div class="article-page__add">
       <adsbygoogle
         ad-slot="8210539652"
         ad-layout="in-article"
         ad-format="fluid"
       />
-    </div>
+    </div> -->
 
     <lazy-comments-list id="comment" :items="comments" />
 
