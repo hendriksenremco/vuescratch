@@ -16,13 +16,22 @@
     </div>
     <div class="home-page__powered">
       <h3>This blog is powered by</h3>
-      <a href="https://www.contentful.com">
+      <a
+        href="https://www.contentful.com"
+        @click="$gtag('event', 'clickout', { event_label: 'Contenful.com' })"
+      >
         <img src="~assets/logos/contentfull.svg" />
       </a>
-      <a href="https://www.netlify.com">
+      <a
+        href="https://www.netlify.com"
+        @click="$gtag('event', 'clickout', { event_label: 'Netlify.com' })"
+      >
         <img src="~assets/logos/netlify.svg" />
       </a>
-      <a href="https://www.unsplash.com">
+      <a
+        href="https://www.unsplash.com"
+        @click="$gtag('event', 'clickout', { event_label: 'Unsplash.com' })"
+      >
         <img src="~assets/logos/unsplash.svg" />
       </a>
     </div>
