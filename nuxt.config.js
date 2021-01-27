@@ -238,7 +238,7 @@ export default {
   content: {},
 
   'google-gtag': {
-    id: 'G-XDKT9DR8M4G',
+    id: 'G-XDKT9DR8M4',
   },
 
   sitemap: {
