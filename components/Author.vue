@@ -1,5 +1,5 @@
 <template>
-  <div v-if="author" class="author">
+  <div v-if="author" class="author" :class="{ 'author--white': white }">
     <div
       class="author__image"
       :style="{ 'background-image': 'url(' + image + '?fm=webp&w=64&h=64)' }"
@@ -15,6 +15,10 @@ export default {
     date: {
       type: String,
       default: '',
+    },
+    white: {
+      type: Boolean,
+      default: false,
     },
     image: {
       type: String,
@@ -46,7 +50,11 @@ export default {
   font-size: 0.8rem;
   line-height: 1rem;
   margin: 0.5rem 0;
-  color: rgba($white, 0.5);
+  color: $grey-darker;
+
+  &--white {
+    color: rgba($white, 0.75);
+  }
 
   &__image {
     background-size: cover;

@@ -4,7 +4,7 @@
       <lazy-image :src="`${image}?fm=webp&w=500`" />
     </div>
     <div class="article-card__content">
-      <h3>{{ title }}</h3>
+      <h2>{{ title }}</h2>
       <lazy-author :author="author" :image="authorImage" :date="date" />
       <p>
         {{ description }}
@@ -49,9 +49,9 @@ export default {
 </script>
 <style lang="scss">
 .article-card {
-  background-color: $grey-darker;
+  background-color: $white;
   border-radius: $border-radius * 2;
-  color: $white;
+  color: $black;
   display: flex;
   flex-direction: column;
   overflow: hidden;

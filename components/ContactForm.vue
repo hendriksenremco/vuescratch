@@ -67,8 +67,7 @@ export default {
 </script>
 <style lang="scss">
 .contact-form {
-  background-color: $grey-darker;
-  color: $grey-lighter;
+  background-color: $white;
   border-radius: $border-radius * 2;
   max-width: $breakpoint-mobile;
   display: grid;

@@ -29,7 +29,7 @@ export default {
   flex-direction: column;
 
   &__label {
-    color: $white;
+    color: $black;
     font-family: $font-heading;
     font-weight: 800;
     padding: $spacing 0;
@@ -37,10 +37,10 @@ export default {
 
   &__input {
     -webkit-appearance: none;
-    background-color: $grey-dark;
+    background-color: $grey-lightest;
     border: 0;
     border-radius: $spacing;
-    color: $white;
+    color: $black;
     font-size: 1rem;
     font-family: $font-base;
     padding: $spacing * 2;

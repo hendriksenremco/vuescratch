@@ -5,6 +5,7 @@
       <h1>{{ page.fields.title }}</h1>
       <lazy-article-background :image="page.fields.heroImage.fields.file.url" />
       <lazy-author
+        white
         :author="page.fields.author.fields.name"
         :image="page.fields.author.fields.image.fields.file.url"
         :date="page.sys.createdAt"
@@ -127,8 +128,7 @@ export default {
     }
 
     h1 {
-      text-shadow: 0px 0px 10px rgba($black, 1);
-      margin: 0;
+      text-shadow: 0px 2px 8px rgba($black, 0.75);
     }
 
     .author {
@@ -145,7 +145,7 @@ export default {
   }
 
   &__add {
-    background-color: $grey-darker;
+    background-color: rgba($black, 0.5);
     border-radius: $border-radius * 2;
     margin-top: $spacing * 6;
     padding: $spacing * 2;

@@ -3,7 +3,16 @@
     <div class="container">
       <search-form show-close :value="query" auto-focus @close="onClose" />
       <div v-if="results.items.length" class="search-results__items">
-        <div
+        <article-card
+          v-for="result in results.items"
+          :key="result.fields.slug"
+          :title="result.fields.title"
+          :description="result.fields.description"
+          :author="result.fields.author.fields.name"
+          :author-image="result.fields.author.fields.image.fields.file.url"
+          :date="result.sys.createdAt"
+        />
+        <!-- <div
           v-for="result in results.items"
           :key="result.fields.slug"
           class="search-results__item"
@@ -18,7 +27,7 @@
             :to="{ name: 'slug', params: { slug: result.fields.slug } }"
             >Read article</nuxt-link
           >
-        </div>
+        </div> -->
       </div>
       <div v-else class="container">
         <h3>Nothing found for query {{ query }}</h3>
@@ -54,7 +63,7 @@ export default {
     async search() {
       this.results = await client.getEntries({
         content_type: 'blogPost',
-        select: 'fields.slug,fields.description,fields.title',
+        select: 'fields.slug,fields.description,fields.title,fields.author',
         'fields.body[match]': this.query,
       })
     },
@@ -78,6 +87,14 @@ export default {
 
   &__items {
     padding: 2rem 0;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: $spacing * 6;
+
+    @media (max-width: #{$breakpoint-mobile}) {
+      grid-template-columns: 1fr;
+      grid-gap: $spacing * 3;
+    }
   }
 
   &__item {

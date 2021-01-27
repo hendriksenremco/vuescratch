@@ -99,7 +99,7 @@ export default {
   }
 
   &:focus-within {
-    box-shadow: 0 0 0 4px rgba($accent, 0.5);
+    box-shadow: 0 0 0 2px rgba($accent, 0.5);
   }
 
   &__input {

@@ -48,20 +48,12 @@ export default {
 </script>
 <style lang="scss">
 .comments-list {
-  padding: $spacing * 8;
-
-  @media (max-width: #{$breakpoint-tablet}) {
-    padding: $spacing * 4;
-  }
-  @media (max-width: #{$breakpoint-mobile}) {
-    padding: $spacing * 3;
-  }
-
   &__title {
-    color: $grey-darker;
-    font-size: 2.5rem;
-    margin-bottom: 0;
+    color: rgba($white, 0.25);
+    font-size: 2rem;
     text-align: left;
+    margin-top: $spacing * 6;
+    padding-left: $spacing * 3;
   }
 
   &__items {
@@ -70,10 +62,9 @@ export default {
   }
 
   &__item {
-    background-color: $grey-darker;
-    box-shadow: 0 0 25px rgba($black, 0.1);
-    color: $white;
-    border-radius: $border-radius;
+    background-color: $white;
+    color: $black;
+    border-radius: $border-radius * 2;
     padding: $spacing * 3;
     position: relative;
 
@@ -94,8 +85,8 @@ export default {
     }
 
     &__title {
-      color: $grey-light;
       font-size: 1.2rem;
+      line-height: 1rem;
     }
     &__date {
       font-family: $font-heading;

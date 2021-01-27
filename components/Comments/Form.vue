@@ -36,9 +36,9 @@
 </template>
 <style lang="scss">
 .comments-form {
-  background-color: $grey-darker;
+  background-color: $white;
   border-radius: $border-radius * 2;
-  color: $grey-lighter;
+  color: $black;
   display: grid;
   grid-template-columns: 1fr 1fr;
   grid-gap: $spacing * 3;

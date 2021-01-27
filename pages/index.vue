@@ -65,11 +65,6 @@ export default {
         this.end = true
       }
     },
-    author(authorSlug) {
-      return this.authors.find((author) => {
-        return author.slug === authorSlug
-      })
-    },
   },
 }
 </script>
