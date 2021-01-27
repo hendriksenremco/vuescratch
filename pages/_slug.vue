@@ -19,11 +19,11 @@
       <strong>
         Leave a comment below if you have got any questions about this article.
       </strong>
-      <adsbygoogle
+      <!-- <adsbygoogle
         ad-slot="8210539652"
         ad-layout="in-article"
         ad-format="fluid"
-      />
+      /> -->
     </article-content>
 
     <!-- <div class="article-page__add"></div> -->
