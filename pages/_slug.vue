@@ -148,7 +148,6 @@ export default {
     background-color: $black;
     border-radius: $border-radius * 2;
     margin-top: $spacing * 6;
-    padding: $spacing * 2;
     overflow: hidden;
   }
 
