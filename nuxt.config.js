@@ -188,7 +188,7 @@ export default {
   },
 
   'google-adsense': {
-    id: 'ca-pub-4674696175162885',
+    id: 'ca-pub-5531653977611993',
     onPageLoad: true,
   },
 
@@ -238,7 +238,7 @@ export default {
   content: {},
 
   'google-gtag': {
-    id: 'G-5XGBF923P4',
+    id: 'G-XDKT9DR8M4G',
   },
 
   sitemap: {
