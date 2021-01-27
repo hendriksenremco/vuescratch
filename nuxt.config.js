@@ -170,7 +170,7 @@ export default {
     '@nuxtjs/google-gtag',
     'nuxt-facebook-pixel-module',
     'nuxt-webfontloader',
-    '@nuxtjs/google-adsense',
+    // '@nuxtjs/google-adsense',
   ],
 
   webfontloader: {
@@ -187,10 +187,10 @@ export default {
     disabled: false,
   },
 
-  'google-adsense': {
-    id: 'ca-pub-5531653977611993',
-    onPageLoad: true,
-  },
+  // 'google-adsense': {
+  //   id: 'ca-pub-5531653977611993',
+  //   onPageLoad: true,
+  // },
 
   feed: [
     {
