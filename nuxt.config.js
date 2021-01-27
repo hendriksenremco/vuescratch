@@ -239,7 +239,6 @@ export default {
 
   'google-gtag': {
     id: 'G-5XGBF923P4',
-    debug: true,
   },
 
   sitemap: {
