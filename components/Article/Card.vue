@@ -1,7 +1,7 @@
 <template>
   <nuxt-link class="article-card" :to="{ name: 'slug', params: { slug } }">
     <div v-if="image" class="article-card__image">
-      <lazy-image :src="`${image}?fm=webp&w=500`" />
+      <lazy-image :src="`${image}?fm=webp&q=50&w=500`" />
     </div>
     <div class="article-card__content">
       <h2>{{ title }}</h2>

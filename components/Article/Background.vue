@@ -1,23 +1,23 @@
 <template>
   <picture class="article-background">
     <source
-      :srcset="`${image}?fm=webp&q=75&w=3000`"
+      :srcset="`${image}?fm=webp&q=25&w=3000`"
       media="(min-width: 1800px)"
     />
     <source
-      :srcset="`${image}?fm=webp&q=75&w=1800`"
+      :srcset="`${image}?fm=webp&q=25&w=1800`"
       media="(min-width: 1200px)"
     />
     <source
-      :srcset="`${image}?fm=webp&q=75&w=1200`"
+      :srcset="`${image}?fm=webp&q=25&w=1600`"
       media="(min-width: 800px)"
     />
     <source
-      :srcset="`${image}?fm=webp&q=75&w=800`"
+      :srcset="`${image}?fm=webp&q=25&w=800`"
       media="(min-width: 400px)"
     />
 
-    <img :src="`${image}?fm=webp&q=75&w=400`" />
+    <img :src="`${image}?fm=webp&q=25&w=800`" />
   </picture>
 </template>
 <script>
