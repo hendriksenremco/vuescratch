@@ -132,7 +132,7 @@ export default {
       transition: opacity 150ms ease;
 
       &:hover {
-        opacity: 0.5;
+        opacity: 1;
       }
     }
   }
