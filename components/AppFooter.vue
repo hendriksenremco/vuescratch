@@ -4,7 +4,7 @@
       <socials />
     </div>
     <div class="app-footer__links">
-      VueScratch&copy; 2020 -
+      VueScratch&copy; 2021 -
       <nuxt-link :to="{ name: 'privacy' }">Privacy</nuxt-link>
     </div>
   </footer>

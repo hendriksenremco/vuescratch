@@ -54,11 +54,17 @@ export default {
 
   &--white {
     color: rgba($white, 0.75);
+    text-shadow: 0px 1px 2px rgba($black, 0.5);
+
+    .author__image {
+      box-shadow: 0px 2px 4px rgba($black, 0.5);
+    }
   }
 
   &__image {
     background-size: cover;
     border-radius: 100%;
+
     margin-right: $spacing * 2;
     width: $spacing * 4;
     height: $spacing * 4;

@@ -1,7 +1,7 @@
 <template>
   <div class="search-results">
     <div class="container">
-      <search-form show-close :value="query" auto-focus @close="onClose" />
+      <!-- <search-form show-close :value="query" auto-focus @close="onClose" /> -->
       <div v-if="results.items.length" class="search-results__items">
         <article-card
           v-for="result in results.items"
@@ -62,23 +62,22 @@ export default {
 .search-results {
   background-color: rgba($black, 0.95);
   position: fixed;
-  top: 0;
+  top: $spacing * 10;
   left: 0;
   width: 100%;
   height: 100%;
   z-index: 100;
-  padding: $spacing * 2;
   overflow-y: scroll;
 
   &__items {
-    padding: 2rem 0;
+    padding: $spacing * 2 0;
     display: grid;
     grid-template-columns: 1fr 1fr;
     grid-gap: $spacing * 6;
 
     @media (max-width: #{$breakpoint-mobile}) {
       grid-template-columns: 1fr;
-      grid-gap: $spacing * 3;
+      grid-gap: $spacing * 2;
     }
   }
 

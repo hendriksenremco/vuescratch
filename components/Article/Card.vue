@@ -69,6 +69,10 @@ export default {
     @media (max-width: #{$breakpoint-mobile}) {
       padding: $spacing * 3;
     }
+
+    h2 {
+      margin-top: 0;
+    }
   }
 
   &__image {

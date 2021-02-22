@@ -1,6 +1,6 @@
 html {
   font-family: $font-base;
-  font-size: 1.2rem;
+  font-size: 1.1rem;
   line-height: 1.5rem;
   -ms-text-size-adjust: 100%;
   -webkit-text-size-adjust: 100%;
@@ -8,7 +8,7 @@ html {
   -webkit-font-smoothing: antialiased;
 
   @media (max-width: #{$breakpoint-tablet}) {
-    font-size: 1.1em;
+    font-size: 1rem;
   }
 }
 
@@ -39,7 +39,7 @@ h1 {
 h2 {
   font-size: 1.5rem;
   line-height: 2rem;
-  margin: 0 0 0.5rem;
+  margin-top: 1rem;
 
   @media (max-width: #{$breakpoint-mobile}) {
     font-size: 1.25rem;
@@ -50,7 +50,7 @@ h2 {
 h3 {
   font-size: 1.25rem;
   line-height: 2rem;
-  margin: 0 0 0.5rem;
+  margin-top: 1rem;
 
   @media (max-width: #{$breakpoint-mobile}) {
     font-size: 1.1rem;
@@ -59,8 +59,8 @@ h3 {
 }
 
 p {
-  line-height: 1.9rem;
-  margin-bottom: 2rem;
+  line-height: 1.5rem;
+  margin-bottom: 1rem;
 }
 
 ul {

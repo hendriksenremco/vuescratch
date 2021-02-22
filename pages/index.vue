@@ -109,7 +109,7 @@ export default {
     grid-gap: $spacing * 6;
 
     @media (max-width: #{$breakpoint-mobile}) {
-      grid-gap: $spacing * 3;
+      grid-gap: $spacing * 2;
     }
   }
 

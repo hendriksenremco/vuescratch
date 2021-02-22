@@ -16,9 +16,9 @@
     </header>
     <article-content>
       <div v-html="markedBody"></div>
-      <strong>
+      <div>
         Leave a comment below if you have got any questions about this article.
-      </strong>
+      </div>
     </article-content>
 
     <!-- <div class="article-page__add">
@@ -128,7 +128,7 @@ export default {
     }
 
     h1 {
-      text-shadow: 0px 2px 8px rgba($black, 0.75);
+      text-shadow: 0px 2px 2px rgba($black, 0.75);
     }
 
     .author {

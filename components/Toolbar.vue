@@ -4,7 +4,7 @@
       <logo />
       <span class="spacer"></span>
       <search-form
-        :show-close="showSearch"
+        :show-close="showSearch || $route.query.q"
         :auto-focus="showSearch"
         :value="$route.query.q"
         @close="showSearch = false"

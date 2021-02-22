@@ -76,4 +76,8 @@ main {
   margin: 0 auto;
   min-height: 100vh;
   padding: $spacing * 3;
+
+  @media (max-width: #{$breakpoint-mobile}) {
+    padding: $spacing * 2;
+  }
 }

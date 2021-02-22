@@ -49,7 +49,7 @@ export default {
   }
 
   pre[class*='language-'] {
-    margin-bottom: 2rem;
+    margin-bottom: 1rem;
   }
 }
 </style>
