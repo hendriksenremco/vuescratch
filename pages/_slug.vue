@@ -14,20 +14,20 @@
         {{ tag }}
       </lazy-tag>
     </header>
-    <article-content>
+    <article-content ref="content">
       <div v-html="markedBody"></div>
       <div>
         Leave a comment below if you have got any questions about this article.
       </div>
     </article-content>
 
-    <!-- <div class="article-page__add">
+    <div class="article-page__add">
       <adsbygoogle
         ad-slot="8210539652"
         ad-layout="in-article"
         ad-format="fluid"
       />
-    </div> -->
+    </div>
 
     <lazy-comments-list id="comment" :items="comments" />
 
@@ -92,6 +92,26 @@ export default {
     markedBody() {
       return marked(this.page.fields.body)
     },
+  },
+  mounted() {
+    window.addEventListener('scroll', (event) => {
+      const winTop = window.pageYOffset || document.documentElement.scrollTop
+      const targetBottom =
+        this.$refs.content.$el.offsetTop + this.$refs.content.$el.scrollHeight
+      const windowBottom = winTop + window.outerHeight
+      const progress =
+        100 -
+        ((targetBottom - windowBottom + window.outerHeight / 3) /
+          (targetBottom - window.outerHeight + window.outerHeight / 3)) *
+          100
+
+      window.requestAnimationFrame(() => {
+        this.$store.commit('setReadProgress', progress)
+      })
+    })
+  },
+  destroyed() {
+    this.$store.commit('setReadProgress', null)
   },
 
   head() {

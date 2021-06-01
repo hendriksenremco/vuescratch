@@ -26,6 +26,12 @@
         </button> -->
       </div>
     </div>
+    <div
+      class="toolbar__progress"
+      :style="{
+        transform: 'translateX(' + ($store.state.readProgress - 100) + '%)',
+      }"
+    />
   </header>
 </template>
 <script>
@@ -122,6 +128,16 @@ export default {
       margin-left: $spacing * 3;
       margin-right: $spacing * 2;
     }
+  }
+
+  &__progress {
+    background-color: $accent-muted;
+    height: $spacing / 2;
+    position: absolute;
+    bottom: 0;
+    transition: transform 500ms ease;
+    transform: translateX(0);
+    width: 100vw;
   }
 
   &__inner {
