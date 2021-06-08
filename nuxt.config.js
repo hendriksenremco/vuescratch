@@ -170,7 +170,7 @@ export default {
     '@nuxtjs/google-gtag',
     'nuxt-facebook-pixel-module',
     'nuxt-webfontloader',
-    '@nuxtjs/google-adsense',
+    // '@nuxtjs/google-adsense',
   ],
 
   webfontloader: {
